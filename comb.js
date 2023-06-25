@@ -2,7 +2,7 @@ const fs = require('fs');
 let allOBJ = []
 let trks = [
     "NumPartitions",
-    "KafkaWriter",'CounterProcessor',
+    "KafkaWriter", 'CounterProcessor',
     "EmailLinks",
     "KafkaNotificationsWriter",
     "ReplicationFactor",
@@ -51,17 +51,17 @@ let trks = [
     "PointBaseRate",
     "TokenReserveSupply",
     "TokenTotalSupply",
-    "PointToToken", "DeepLink",
+    "PointToToken", "DeepLink","DefaultContentCount",
     "PreferenceGenerator",
-        "LastActivityService",
-        "ShareTimeoutPerUserDays",
+    "LastActivityService",
+    "ShareTimeoutPerUserDays",
 ]
 let normalizedPath = require("path").join(__dirname);
 require("fs").readdirSync(normalizedPath).forEach(function (file) {
     let ext = file.substring(file.lastIndexOf('.') + 1, file.length) || file;
     let verb = file.substring(0, file.lastIndexOf('.'));
     if (ext == "json" && verb.indexOf("package") < 0) {
-        console.log("file --> ", file);
+        // console.log("file --> ", file);
 
         cleanFile(require(require("path").join(__dirname, file)), verb)
     }
@@ -71,11 +71,19 @@ require("fs").readdirSync(normalizedPath).forEach(function (file) {
 
 function cleanobj(obj) {
     if (typeof obj == "object") {
+
         Object.keys(obj).map(e => {
             trks.map(j => delete obj[j])
 
-
             cleanobj(obj[e])
+
+
+            // if(e.indexOf("Listener")>=0){
+            //     obj[e]["type"] = "Consumer";
+            // } else {
+
+
+            // }
         })
     }
     return obj
@@ -127,16 +135,16 @@ function cleanFile(obj, fnm) {
         })
     })
 
-    allOBJ.push({["repo-name"] : fnm, ...cleanobj(obj)});
+    allOBJ.push({ ["repo-name"]: fnm, ...cleanobj(obj) });
     // Object.keys(obj).map(e => {
-        // let dir = require("path").join(__dirname, "cleaned", fnm)
-        // if (!fs.existsSync(dir)) {
-        //     fs.mkdirSync(dir);
-        // }
+    // let dir = require("path").join(__dirname, "cleaned", fnm)
+    // if (!fs.existsSync(dir)) {
+    //     fs.mkdirSync(dir);
+    // }
 
-        // let newfile = require("path").join(dir, `${e}.json`)
-        // fs.writeFileSync(newfile, JSON.stringify(obj[e], null, 4));
-        // console.log("e------", newfile);
+    // let newfile = require("path").join(dir, `${e}.json`)
+    // fs.writeFileSync(newfile, JSON.stringify(obj[e], null, 4));
+    // console.log("e------", newfile);
     // })
 
 
@@ -144,8 +152,19 @@ function cleanFile(obj, fnm) {
 
     let newfile = require("path").join(__dirname, "cleaned", `${fnm}-cleaned.json`)
     fs.writeFileSync(newfile, JSON.stringify(obj, null, 4));
-    
+
     // console.log(obj);
 }
+
+
+
+
 let allfile = require("path").join(__dirname, "cleaned", `allfile.json`)
 fs.writeFileSync(allfile, JSON.stringify(allOBJ, null, 4));
+
+
+require(allfile).map(p => {
+    Object.keys(p).map(e => {
+        console.log("e", e, e.indexOf("Listener") >= 0, typeof p[e]);
+    })
+})

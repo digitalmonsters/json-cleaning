@@ -1,0 +1,7 @@
+{
+    "NotifierCategoryConfig": {
+        "KafkaTopic": {
+            "Name": "local.category_subscription"
+        }
+    }
+}

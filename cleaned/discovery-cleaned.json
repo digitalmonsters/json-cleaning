@@ -1,0 +1,38 @@
+{
+    "CommentCounterListener": {
+        "GroupId": "local_discovery_content_comments_counter_consumer",
+        "Topic": "local.content_comments_counter"
+    },
+    "ContentListener": {
+        "GroupId": "local_discovery_content_consumer",
+        "Topic": "local.content"
+    },
+    "LikeCounterListener": {
+        "GroupId": "local_discovery_content_likes_consumer",
+        "Topic": "local.likes_count"
+    },
+    "ShareCounterListener": {
+        "GroupId": "local_discovery_content_shares_consumer",
+        "Topic": "local.content_shares"
+    },
+    "UserListener": {
+        "GroupId": "local_discovery_user_consumer",
+        "Topic": "local.user"
+    },
+    "ViewsCounterListener": {
+        "GroupId": "local_discovery_content_views_consumer",
+        "Topic": "local.view_stats_update"
+    },
+    "LikeListener": {
+        "GroupId": "local_discovery_likes_consumer",
+        "Topic": "local.likes"
+    },
+    "CategorySubscriptionListener": {
+        "GroupId": "local_discovery_category_subscription_consumer",
+        "Topic": "local.category_subscription"
+    },
+    "HashtagSubscriptionListener": {
+        "GroupId": "local_discovery_hashtag_subscription_consumer",
+        "Topic": "local.hashtag_subscription"
+    }
+}
