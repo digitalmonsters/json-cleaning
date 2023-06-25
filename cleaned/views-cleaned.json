@@ -1,51 +1,37 @@
 {
     "NotifierContentViewsConfig": {
         "KafkaTopic": {
-            "Name": "local.view_stats_update",
-            "NumPartitions": 0,
-            "ReplicationFactor": 0
+            "Name": "local.view_stats_update"
         }
     },
     "NotifierCategoryViewsConfig": {
         "KafkaTopic": {
-            "Name": "local.category_views",
-            "NumPartitions": 0,
-            "ReplicationFactor": 0
+            "Name": "local.category_views"
         }
     },
     "NotifierHashtagViewsConfig": {
         "KafkaTopic": {
-            "Name": "local.hashtag_views",
-            "NumPartitions": 0,
-            "ReplicationFactor": 0
+            "Name": "local.hashtag_views"
         }
     },
     "NotifierUserContentConfig": {
         "KafkaTopic": {
-            "Name": "local.view_content",
-            "NumPartitions": 0,
-            "ReplicationFactor": 0
+            "Name": "local.view_content"
         }
     },
     "NotifierUserViewConfig": {
         "KafkaTopic": {
-            "Name": "local.today_watch_time",
-            "NumPartitions": 0,
-            "ReplicationFactor": 0
+            "Name": "local.today_watch_time"
         }
     },
     "NotifierOwnerViewsConfig": {
         "KafkaTopic": {
-            "Name": "local.views_received_by_user_count",
-            "NumPartitions": 0,
-            "ReplicationFactor": 0
+            "Name": "local.views_received_by_user_count"
         }
     },
     "NotifierUserTotalWatchConfig": {
         "KafkaTopic": {
-            "Name": "local.total_watch_time",
-            "NumPartitions": 0,
-            "ReplicationFactor": 0
+            "Name": "local.total_watch_time"
         }
     },
     "CounterProcessorConfig": {

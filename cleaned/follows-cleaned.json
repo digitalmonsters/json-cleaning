@@ -1,42 +1,30 @@
 {
     "UserKafka": {
-        "KafkaAuth": {},
         "GroupId": "user-follow-backend",
-        "Topic": "local.user",
-        "ListenerDuration": 5
+        "Topic": "local.user"
     },
     "UserBlockKafka": {
-        "KafkaAuth": {},
         "GroupId": "user-block-follow-backend",
-        "Topic": "local.user_blocked",
-        "ListenerDuration": 5
+        "Topic": "local.user_blocked"
     },
     "NotifierFollowConfig": {
         "KafkaTopic": {
-            "Name": "local.follows",
-            "NumPartitions": 0,
-            "ReplicationFactor": 0
+            "Name": "local.follows"
         }
     },
     "NotifierFollowCounterConfig": {
         "KafkaTopic": {
-            "Name": "local.follows_counter",
-            "NumPartitions": 0,
-            "ReplicationFactor": 0
+            "Name": "local.follows_counter"
         }
     },
     "NotifierTodayFollowersCounterConfig": {
         "KafkaTopic": {
-            "Name": "local.today_followers_counter",
-            "NumPartitions": 0,
-            "ReplicationFactor": 0
+            "Name": "local.today_followers_counter"
         }
     },
     "NotifierUniqueFollowersPerDayCountConfig": {
         "KafkaTopic": {
-            "Name": "local.unique_followers_per_day_count",
-            "NumPartitions": 0,
-            "ReplicationFactor": 0
+            "Name": "local.unique_followers_per_day_count"
         }
     }
 }

@@ -1,30 +1,21 @@
 {
     "NotifierLikeContentConfig": {
         "KafkaTopic": {
-            "Name": "local.likes",
-            "NumPartitions": 0,
-            "ReplicationFactor": 0
+            "Name": "local.likes"
         }
     },
     "NotifierLikesCounterConfig": {
         "KafkaTopic": {
-            "Name": "local.likes_count",
-            "NumPartitions": 0,
-            "ReplicationFactor": 0
+            "Name": "local.likes_count"
         }
     },
     "NotifierUserLikesCounterConfig": {
         "KafkaTopic": {
-            "Name": "local.likes_received_by_user_count",
-            "NumPartitions": 0,
-            "ReplicationFactor": 0
+            "Name": "local.likes_received_by_user_count"
         }
     },
     "UserListener": {
-        "KafkaAuth": {},
         "GroupId": "local-user-like-backend",
-        "Topic": "local.user",
-        "MaxBackOffTimeMilliseconds": 60000,
-        "BackOffTimeIntervalMilliseconds": 1000
+        "Topic": "local.user"
     }
 }

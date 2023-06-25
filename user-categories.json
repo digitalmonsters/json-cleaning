@@ -1,0 +1,43 @@
+{
+    "HttpPort": 5211,
+    "PrivateHttpPort": 5211,
+    "MaxStmtsPerBatch": 130,
+    "AuthApiUrl": "http://localhost",
+    "Scylla": {
+      "Hosts": "",
+      "UserName": "",
+      "Password": "",
+      "Keyspace": "",
+      "Enabled": true,
+      "PageSize": 5000000,
+      "NumConns": 128,
+      "MaxRoutingKeyInfo": 1000000,
+      "MaxPreparedStmts": 1000000,
+      "TimeoutSeconds": 10
+    },
+    "CdcKafka": {
+      "Hosts": "",
+      "KafkaAuth": {},
+      "GroupId": "category-backend",
+      "Topic": "LocalCDCScylla.local_events.user_category",
+      "MinBytes": 100,
+      "MaxBytes": 500000,
+      "MaxBatchSize": 17000,
+      "ListenerDuration": 5,
+      "Tls": true
+    },
+    "KafkaWriter": {
+      "Hosts": "",
+      "KafkaAuth": {},
+      "Tls": true
+    },
+    "NotifierCategoryConfig": {
+      "KafkaTopic": {
+        "Name": "local.category_subscription",
+        "NumPartitions": 0,
+        "ReplicationFactor": 0
+      },
+      "PollTimeMs": 2000,
+      "WorkerPoolSize": 15
+    }
+  }

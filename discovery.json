@@ -1,0 +1,118 @@
+{
+    "HttpPort": 5214,
+    "PrivateHttpPort": 5211,
+    "DefaultContentCount": 10,
+    "ReadonlyDb": {
+      "Host": "localhost",
+      "Port": 5432,
+      "Db": "local_base_api",
+      "User": "postgres",
+      "Password": "qwerty"
+    },
+    "Elastic": {
+      "Host": "http://localhost",
+      "Port": 9200,
+      "NumWorkers": 16,
+      "FlushThreshHold": 5e6,
+      "FlushInterval": 30
+    },
+    "CommentCounterListener": {
+      "Hosts": "",
+      "KafkaAuth": {},
+      "MinBytes": 100,
+      "MaxBytes": 10e7,
+      "Tls": true,
+      "MaxDuration": 700,
+      "MaxBatchSize": 10000,
+      "GroupId": "local_discovery_content_comments_counter_consumer",
+      "Topic": "local.content_comments_counter"
+    },
+    "ContentListener": {
+      "Hosts": "",
+      "KafkaAuth": {},
+      "MinBytes": 100,
+      "MaxBytes": 10e7,
+      "Tls": true,
+      "MaxDuration": 700,
+      "MaxBatchSize": 10000,
+      "GroupId": "local_discovery_content_consumer",
+      "Topic": "local.content"
+    },
+    "LikeCounterListener": {
+      "Hosts": "",
+      "KafkaAuth": {},
+      "MinBytes": 100,
+      "MaxBytes": 10e7,
+      "Tls": true,
+      "MaxDuration": 700,
+      "MaxBatchSize": 10000,
+      "GroupId": "local_discovery_content_likes_consumer",
+      "Topic": "local.likes_count"
+    },
+    "ShareCounterListener": {
+      "Hosts": "",
+      "KafkaAuth": {},
+      "MinBytes": 100,
+      "MaxBytes": 10e7,
+      "Tls": true,
+      "MaxDuration": 700,
+      "MaxBatchSize": 10000,
+      "GroupId": "local_discovery_content_shares_consumer",
+      "Topic": "local.content_shares"
+    },
+    "UserListener": {
+      "Hosts": "",
+      "KafkaAuth": {},
+      "MinBytes": 100,
+      "MaxBytes": 10e7,
+      "Tls": true,
+      "MaxDuration": 700,
+      "MaxBatchSize": 10000,
+      "GroupId": "local_discovery_user_consumer",
+      "Topic": "local.user"
+    },
+    "ViewsCounterListener": {
+      "Hosts": "",
+      "KafkaAuth": {},
+      "MinBytes": 100,
+      "MaxBytes": 10e7,
+      "Tls": true,
+      "MaxDuration": 700,
+      "MaxBatchSize": 10000,
+      "GroupId": "local_discovery_content_views_consumer",
+      "Topic": "local.view_stats_update"
+    },
+    "LikeListener": {
+      "Hosts": "",
+      "KafkaAuth": {},
+      "MinBytes": 100,
+      "MaxBytes": 10e7,
+      "Tls": true,
+      "MaxDuration": 700,
+      "MaxBatchSize": 10000,
+      "GroupId": "local_discovery_likes_consumer",
+      "Topic": "local.likes"
+    },
+    "CategorySubscriptionListener": {
+      "Hosts": "",
+      "KafkaAuth": {},
+      "MinBytes": 100,
+      "MaxBytes": 10e7,
+      "Tls": true,
+      "MaxDuration": 700,
+      "MaxBatchSize": 10000,
+      "GroupId": "local_discovery_category_subscription_consumer",
+      "Topic": "local.category_subscription"
+    },
+    "HashtagSubscriptionListener": {
+      "Hosts": "",
+      "KafkaAuth": {},
+      "MinBytes": 100,
+      "MaxBytes": 10e7,
+      "Tls": true,
+      "MaxDuration": 700,
+      "MaxBatchSize": 10000,
+      "GroupId": "local_discovery_hashtag_subscription_consumer",
+      "Topic": "local.hashtag_subscription"
+    }
+  }

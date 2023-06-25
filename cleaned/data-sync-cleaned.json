@@ -1,34 +1,17 @@
 {
-    "FollowsKafka": {},
-    "LikesKafka": {
-        "KafkaAuth": {}
-    },
-    "ContentKafkaWriter": {
-        "KafkaAuth": {}
-    },
-    "UserKafkaWriter": {
-        "KafkaAuth": {}
-    },
     "NotifierContentDeleteConfig": {
         "KafkaTopic": {
-            "Name": "dev.content",
-            "NumPartitions": 12,
-            "ReplicationFactor": 2
+            "Name": "dev.content"
         }
     },
     "NotifierUserUpdateInfoConfig": {
         "KafkaTopic": {
-            "Name": "dev.user",
-            "NumPartitions": 12,
-            "ReplicationFactor": 2
+            "Name": "dev.user"
         }
     },
     "NotifierUserConfig": {
-        "KafkaAuth": {},
         "KafkaTopic": {
-            "Name": "dev.user",
-            "NumPartitions": 0,
-            "ReplicationFactor": 0
+            "Name": "dev.user"
         }
     }
 }

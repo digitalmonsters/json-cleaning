@@ -1,61 +1,42 @@
 {
-    "KafkaNotificationsWriter": {
-        "KafkaAuth": {}
-    },
     "NotifierCreatorsConfig": {
         "KafkaTopic": {
-            "Name": "dev.creators",
-            "NumPartitions": 12,
-            "ReplicationFactor": 2
+            "Name": "dev.creators"
         }
     },
     "AdminPushMessageNotifier": {
         "KafkaTopic": {
-            "Name": "dev.push_admin_messages",
-            "NumPartitions": 12,
-            "ReplicationFactor": 2
+            "Name": "dev.push_admin_messages"
         }
     },
     "AdminEmailMessageNotifier": {
         "KafkaTopic": {
-            "Name": "dev.email",
-            "NumPartitions": 12,
-            "ReplicationFactor": 2
+            "Name": "dev.email"
         }
     },
     "NotifierUserConfig": {
         "KafkaTopic": {
-            "Name": "dev.user",
-            "NumPartitions": 12,
-            "ReplicationFactor": 2
+            "Name": "dev.user"
         }
     },
     "NotifierProfileConfig": {
         "KafkaTopic": {
-            "Name": "dev.profile",
-            "NumPartitions": 12,
-            "ReplicationFactor": 2
+            "Name": "dev.profile"
         }
     },
     "NotifierBlockConfig": {
         "KafkaTopic": {
-            "Name": "dev.user_blocked",
-            "NumPartitions": 12,
-            "ReplicationFactor": 2
+            "Name": "dev.user_blocked"
         }
     },
     "NotifierEmailNotificationsConfig": {
         "KafkaTopic": {
-            "Name": "dev.notification_created",
-            "NumPartitions": 12,
-            "ReplicationFactor": 2
+            "Name": "dev.notification_created"
         }
     },
     "NotifierReferrerVerifiedConfig": {
         "KafkaTopic": {
-            "Name": "dev.referrer_verified",
-            "NumPartitions": 12,
-            "ReplicationFactor": 2
+            "Name": "dev.referrer_verified"
         }
     },
     "ListenerFeatureBought": {
@@ -73,136 +54,74 @@
     "Referral": {
         "UserVerified": {
             "Listener": {
-                "Hosts": "127.0.0.1",
-                "MinBytes": 100,
-                "MaxBytes": 10000000,
-                "Tls": true,
                 "GroupId": "local_user_go_user_verified_listener",
                 "Topic": "local.user"
             }
         },
         "NotifierReferrerConfig": {
-            "Hosts": "localhost:9093",
-            "Tls": true,
-            "KafkaAuth": {},
-            "MaxRetryCount": 10,
-            "FlushTimeMilliseconds": 2000,
-            "FlushAtSize": 40,
             "KafkaTopic": {
-                "Name": "dev.referrer_verified",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "dev.referrer_verified"
             }
-        },
-        "DeepLink": {
-            "HttpPort": 5412
         }
     },
     "Counters": {
         "Listeners": {
             "SpotUserLikes": {
-                "Hosts": "127.0.0.1",
-                "MinBytes": 100,
-                "MaxBytes": 10000000,
-                "Tls": true,
                 "GroupId": "local_user_spot_user_likes_listener",
-                "Topic": "local.spot_author_likes_count",
-                "MaxDuration": 2,
-                "MaxBatchSize": 10000
+                "Topic": "local.spot_author_likes_count"
             },
             "SpotUserDislikes": {
-                "Hosts": "127.0.0.1",
-                "MinBytes": 100,
-                "MaxBytes": 10000000,
-                "Tls": true,
                 "GroupId": "local_user_spot_user_dislikes_listener",
-                "Topic": "local.spot_author_dislikes_count",
-                "MaxDuration": 2,
-                "MaxBatchSize": 10000
+                "Topic": "local.spot_author_dislikes_count"
             },
             "SpotUserLoves": {
-                "Hosts": "127.0.0.1",
-                "MinBytes": 100,
-                "MaxBytes": 10000000,
-                "Tls": true,
                 "GroupId": "local_user_spot_user_loves_listener",
-                "Topic": "local.spot_author_loves_count",
-                "MaxDuration": 2,
-                "MaxBatchSize": 10000
+                "Topic": "local.spot_author_loves_count"
             }
         }
     },
     "User": {
         "FollowsCountersUpdated": {
             "Listener": {
-                "Hosts": "127.0.0.1",
-                "MinBytes": 100,
-                "MaxBytes": 10000000,
-                "Tls": true,
                 "GroupId": "local_user_go_follows_counters_updated_listener",
                 "Topic": "local.follows_counter"
             }
         },
         "FirstPaidWithdrawal": {
             "Listener": {
-                "Hosts": "127.0.0.1",
-                "MinBytes": 100,
-                "MaxBytes": 10000000,
-                "Tls": true,
                 "GroupId": "local_user_go_first_paid_withdrawal_listener",
                 "Topic": "local.withdrawal"
             }
         },
         "UploadStatsUpdate": {
             "Listener": {
-                "Hosts": "127.0.0.1",
-                "MinBytes": 100,
-                "MaxBytes": 10000000,
-                "Tls": true,
                 "GroupId": "local_user_go_upload_stats_update_listener",
                 "Topic": "local.uploads_stats_update"
             }
         },
         "SharesCounterUpdated": {
             "Listener": {
-                "Hosts": "127.0.0.1",
-                "MinBytes": 100,
-                "MaxBytes": 10000000,
-                "Tls": true,
                 "GroupId": "local_user_go_shares_counter_updated_listener",
                 "Topic": "local.content_user_stats"
             }
         },
         "UserSocialSubsPublisher": {
             "Topic": {
-                "Name": "local.user_social_subs",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
-            },
-            "Hosts": "127.0.0.1",
-            "Tls": true,
-            "FlushAtSize": 10,
-            "PollTimeMs": 2000
-        },
-        "ExportRecordsPerIteration": 1000
+                "Name": "local.user_social_subs"
+            }
+        }
     },
     "Crm": {
         "UserUpdated": {
             "Listener": {
-                "MaxDuration": 15,
-                "MaxBatchSize": 100,
-                "Hosts": "127.0.0.1",
                 "Topic": "local.crm_user",
-                "GroupId": "local_user_go_crm_user_updated",
-                "Tls": true
+                "GroupId": "local_user_go_crm_user_updated"
             }
         }
     },
     "CrmUpdateUserNotifier": {
         "Topic": {
-            "Name": "local.crm_user",
-            "NumPartitions": "12",
-            "ReplicationFactor": "2"
+            "Name": "local.crm_user"
         }
     }
 }
