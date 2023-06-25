@@ -30,30 +30,22 @@
         "repo-name": "comments",
         "NotifierCommentConfig": {
             "KafkaTopic": {
-                "Name": "local.comments",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "local.comments"
             }
         },
         "NotifierContentCommentsCounterConfig": {
             "KafkaTopic": {
-                "Name": "local.content_comments_counter",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "local.content_comments_counter"
             }
         },
         "NotifierUserCommentsCounterConfig": {
             "KafkaTopic": {
-                "Name": "local.user_comments_counter",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "local.user_comments_counter"
             }
         },
         "NotifierVoteConfig": {
             "KafkaTopic": {
-                "Name": "local.comment_votes",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "local.comment_votes"
             }
         },
         "UserListener": {
@@ -64,11 +56,8 @@
     {
         "repo-name": "configurator",
         "ConfigNotifier": {
-            "KafkaAuth": {},
             "Topic": {
-                "Name": "local.new_config",
-                "NumPartitions": 12,
-                "ReplicationFactor": 2
+                "Name": "local.new_config"
             }
         }
     },
@@ -76,715 +65,305 @@
         "repo-name": "content",
         "UserListener": {
             "Kafka": {
-                "Hosts": "127.0.0.1",
-                "KafkaAuth": {},
-                "MinBytes": 100,
-                "MaxBytes": 100000000,
-                "Tls": true,
                 "GroupId": "local_back_content_user_consumer",
-                "Topic": "local.user",
-                "MaxBackOffTimeMilliseconds": 60000,
-                "BackOffTimeIntervalMilliseconds": 1000
+                "Topic": "local.user"
             }
         },
         "CreatorsListener": {
             "Kafka": {
-                "Hosts": "127.0.0.1",
-                "KafkaAuth": {},
-                "MinBytes": 100,
-                "MaxBytes": 100000000,
-                "Tls": true,
                 "GroupId": "local_back_content_creators_consumer",
-                "Topic": "local.creators",
-                "MaxBackOffTimeMilliseconds": 60000,
-                "BackOffTimeIntervalMilliseconds": 1000
+                "Topic": "local.creators"
             }
         },
         "UserBlockListener": {
             "Kafka": {
-                "Hosts": "127.0.0.1",
-                "KafkaAuth": {},
-                "MinBytes": 100,
-                "MaxBytes": 100000000,
-                "Tls": true,
                 "GroupId": "local_back_content_user_block_consumer",
-                "Topic": "local.user_blocked",
-                "MaxBackOffTimeMilliseconds": 60000,
-                "BackOffTimeIntervalMilliseconds": 1000
+                "Topic": "local.user_blocked"
             }
         },
         "UserFollowingListener": {
             "Kafka": {
-                "Hosts": "127.0.0.1",
-                "KafkaAuth": {},
-                "MinBytes": 100,
-                "MaxBytes": 100000000,
-                "Tls": true,
                 "GroupId": "local_back_user_following_consumer",
-                "Topic": "local.follows",
-                "MaxBackOffTimeMilliseconds": 60000,
-                "BackOffTimeIntervalMilliseconds": 1000
+                "Topic": "local.follows"
             }
         },
         "ContentListener": {
             "Kafka": {
-                "Hosts": "127.0.0.1",
-                "KafkaAuth": {},
-                "MinBytes": 100,
-                "MaxBytes": 100000000,
-                "Tls": true,
                 "GroupId": "local_back_content_consumer",
-                "Topic": "local.content",
-                "MaxBackOffTimeMilliseconds": 60000,
-                "BackOffTimeIntervalMilliseconds": 1000
+                "Topic": "local.content"
             }
         },
         "ContentPredictionsListener": {
             "Kafka": {
-                "Hosts": "127.0.0.1",
-                "KafkaAuth": {},
-                "MinBytes": 100,
-                "MaxBytes": 100000000,
-                "Tls": true,
                 "GroupId": "local_back_content_predictions_consumer",
-                "Topic": "local.content_predictions",
-                "MaxBackOffTimeMilliseconds": 60000,
-                "BackOffTimeIntervalMilliseconds": 1000
+                "Topic": "local.content_predictions"
             }
         },
         "ShareContentListener": {
             "Kafka": {
-                "Hosts": "127.0.0.1",
-                "KafkaAuth": {},
-                "MinBytes": 100,
-                "MaxBytes": 100000000,
-                "Tls": true,
                 "GroupId": "local_back_share_user_content_consumer",
-                "Topic": "local.share_content",
-                "MaxBackOffTimeMilliseconds": 60000,
-                "BackOffTimeIntervalMilliseconds": 1000
-            },
-            "LimitPerUser": 1000
+                "Topic": "local.share_content"
+            }
         },
         "LikeContentListener": {
             "Kafka": {
-                "Hosts": "127.0.0.1",
-                "KafkaAuth": {},
-                "MinBytes": 100,
-                "MaxBytes": 100000000,
-                "Tls": true,
                 "GroupId": "local_back_like_content_consumer",
-                "Topic": "local.likes",
-                "MaxBackOffTimeMilliseconds": 60000,
-                "BackOffTimeIntervalMilliseconds": 1000
-            },
-            "LimitPerUser": 1000
+                "Topic": "local.likes"
+            }
         },
         "LikeCounterListener": {
             "Kafka": {
-                "Hosts": "127.0.0.1",
-                "KafkaAuth": {},
-                "MinBytes": 100,
-                "MaxBytes": 100000000,
-                "Tls": true,
                 "GroupId": "local_back_like_consumer",
-                "Topic": "local.likes_count",
-                "MaxBackOffTimeMilliseconds": 60000,
-                "BackOffTimeIntervalMilliseconds": 1000
+                "Topic": "local.likes_count"
             }
         },
         "UserLikeCounterListener": {
             "Kafka": {
-                "Hosts": "127.0.0.1",
-                "KafkaAuth": {},
-                "MinBytes": 100,
-                "MaxBytes": 100000000,
-                "Tls": true,
                 "GroupId": "local_back_user_like_consumer",
-                "Topic": "local.likes_received_by_user_count",
-                "MaxBackOffTimeMilliseconds": 60000,
-                "BackOffTimeIntervalMilliseconds": 1000
+                "Topic": "local.likes_received_by_user_count"
             }
         },
         "DislikeCounterListener": {
             "Kafka": {
-                "Hosts": "127.0.0.1",
-                "KafkaAuth": {},
-                "MinBytes": 100,
-                "MaxBytes": 100000000,
-                "Tls": true,
                 "GroupId": "local_back_dislike_consumer",
-                "Topic": "local.dislikes_count",
-                "MaxBackOffTimeMilliseconds": 60000,
-                "BackOffTimeIntervalMilliseconds": 1000
+                "Topic": "local.dislikes_count"
             }
         },
         "LoveCounterListener": {
             "Kafka": {
-                "Hosts": "127.0.0.1",
-                "KafkaAuth": {},
-                "MinBytes": 100,
-                "MaxBytes": 100000000,
-                "Tls": true,
                 "GroupId": "local_back_love_consumer",
-                "Topic": "local.loves_count",
-                "MaxBackOffTimeMilliseconds": 60000,
-                "BackOffTimeIntervalMilliseconds": 1000
+                "Topic": "local.loves_count"
             }
         },
         "LikeDislikeListener": {
             "Kafka": {
-                "Hosts": "127.0.0.1",
-                "KafkaAuth": {},
-                "MinBytes": 100,
-                "MaxBytes": 100000000,
-                "Tls": true,
                 "GroupId": "local_back_like_dislike_consumer",
-                "Topic": "local.likes",
-                "MaxBackOffTimeMilliseconds": 60000,
-                "BackOffTimeIntervalMilliseconds": 1000
+                "Topic": "local.likes"
             }
         },
         "ViewContentListener": {
             "Kafka": {
-                "Hosts": "127.0.0.1",
-                "KafkaAuth": {},
-                "MinBytes": 100,
-                "MaxBytes": 100000000,
-                "Tls": true,
                 "GroupId": "local_back_view_user_content_consumer",
-                "Topic": "local.view_content",
-                "MaxBackOffTimeMilliseconds": 60000,
-                "BackOffTimeIntervalMilliseconds": 1000
-            },
-            "LimitPerUser": 1000
+                "Topic": "local.view_content"
+            }
         },
         "ViewCounterListener": {
             "Kafka": {
-                "Hosts": "127.0.0.1",
-                "KafkaAuth": {},
-                "MinBytes": 100,
-                "MaxBytes": 100000000,
-                "Tls": true,
                 "GroupId": "local_back_view_consumer",
-                "Topic": "local.view_stats_update",
-                "MaxBackOffTimeMilliseconds": 60000,
-                "BackOffTimeIntervalMilliseconds": 1000
+                "Topic": "local.view_stats_update"
             }
         },
         "ViewEventsCounterListener": {
             "Kafka": {
-                "Hosts": "127.0.0.1",
-                "KafkaAuth": {},
-                "MinBytes": 100,
-                "MaxBytes": 100000000,
-                "Tls": true,
                 "GroupId": "local_back_view_counter_consumer",
-                "Topic": "local.view_content",
-                "MaxBackOffTimeMilliseconds": 60000,
-                "BackOffTimeIntervalMilliseconds": 1000
+                "Topic": "local.view_content"
             }
         },
         "CategoryViewListener": {
             "Kafka": {
-                "Hosts": "127.0.0.1",
-                "KafkaAuth": {},
-                "MinBytes": 100,
-                "MaxBytes": 100000000,
-                "Tls": true,
                 "GroupId": "local_back_category_view_consumer",
-                "Topic": "local.category_views",
-                "MaxBackOffTimeMilliseconds": 60000,
-                "BackOffTimeIntervalMilliseconds": 1000
+                "Topic": "local.category_views"
             }
         },
         "HashtagViewListener": {
             "Kafka": {
-                "Hosts": "127.0.0.1",
-                "KafkaAuth": {},
-                "MinBytes": 100,
-                "MaxBytes": 100000000,
-                "Tls": true,
                 "GroupId": "local_back_hashtag_view_consumer",
-                "Topic": "local.hashtag_views",
-                "MaxBackOffTimeMilliseconds": 60000,
-                "BackOffTimeIntervalMilliseconds": 1000
+                "Topic": "local.hashtag_views"
             }
         },
         "UserCategoryListener": {
             "Kafka": {
-                "Hosts": "127.0.0.1",
-                "KafkaAuth": {},
-                "MinBytes": 100,
-                "MaxBytes": 100000000,
-                "Tls": true,
                 "GroupId": "local_back_user_categories_consumer",
-                "Topic": "local.category_subscription",
-                "MaxBackOffTimeMilliseconds": 60000,
-                "BackOffTimeIntervalMilliseconds": 1000
+                "Topic": "local.category_subscription"
             }
         },
         "UserHashtagListener": {
             "Kafka": {
-                "Hosts": "127.0.0.1",
-                "KafkaAuth": {},
-                "MinBytes": 100,
-                "MaxBytes": 100000000,
-                "Tls": true,
                 "GroupId": "local_back_user_hashtags_consumer",
-                "Topic": "local.hashtag_subscription",
-                "MaxBackOffTimeMilliseconds": 60000,
-                "BackOffTimeIntervalMilliseconds": 1000
+                "Topic": "local.hashtag_subscription"
             }
         },
         "CommentsCounterListener": {
             "GroupId": "local_content_comments_counter_listener",
             "Topic": "local.content_comments_counter"
         },
-        "PreferenceGenerator": {
-            "LikeCoefficient": 2,
-            "ShareCoefficient": 2,
-            "CategoriesLimit": 100,
-            "HashtagsLimit": 100,
-            "WatchesLimit": 1000,
-            "LikesLimit": 2000,
-            "SharesLimit": 2000
-        },
-        "LastActivityService": {
-            "MessagesChunkLenWrite": 500,
-            "MessagesChunkLenRead": 1000
-        },
-        "ShareTimeoutPerUserDays": 14,
         "ContentPublisher": {
             "Topic": {
-                "Name": "local.content",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
-            }
-        },
-        "BulkVideoConfig": {
-            "DailyVideoFileId": "",
-            "OneTimeVideoFile1": {
-                "VideoId": "",
-                "RecommendationsOn": false,
-                "SheetName": ""
-            },
-            "OneTimeVideoFile2": {
-                "VideoId": "",
-                "RecommendationsOn": false,
-                "SheetName": ""
+                "Name": "local.content"
             }
         },
         "PublisherConfig": {
             "Topic": {
-                "Name": "local.new_config",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "local.new_config"
             }
         },
         "TopSpotPublisherConfig": {
             "Topic": {
-                "Name": "local.top_spots",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "local.top_spots"
             }
         },
         "ContentUserStatsPublisher": {
             "Topic": {
-                "Name": "local.content_user_stats",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "local.content_user_stats"
             }
         },
         "UploadsPublisher": {
             "Topic": {
-                "Name": "local.uploads_stats_update",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "local.uploads_stats_update"
             }
         }
     },
     {
         "repo-name": "data-sync",
-        "FollowsKafka": {},
-        "LikesKafka": {
-            "KafkaAuth": {}
-        },
-        "ContentKafkaWriter": {
-            "KafkaAuth": {}
-        },
-        "UserKafkaWriter": {
-            "KafkaAuth": {}
-        },
         "NotifierContentDeleteConfig": {
             "KafkaTopic": {
-                "Name": "dev.content",
-                "NumPartitions": 12,
-                "ReplicationFactor": 2
+                "Name": "dev.content"
             }
         },
         "NotifierUserUpdateInfoConfig": {
             "KafkaTopic": {
-                "Name": "dev.user",
-                "NumPartitions": 12,
-                "ReplicationFactor": 2
+                "Name": "dev.user"
             }
         },
         "NotifierUserConfig": {
-            "KafkaAuth": {},
             "KafkaTopic": {
-                "Name": "dev.user",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "dev.user"
             }
         }
     },
     {
         "repo-name": "event-publisher",
         "Like": {
-            "MaxPoolSize": 2048,
-            "EventsFlushInterval": 100,
             "DeletedUserListener": {
-                "Hosts": "127.0.0.1",
-                "KafkaAuth": {},
                 "GroupId": "local-user-like-backend",
-                "Topic": "local.user",
-                "MinBytes": 1000000,
-                "MaxBytes": 100000000,
-                "Tls": true,
-                "MaxBackOffTimeMilliseconds": 60000,
-                "BackOffTimeIntervalMilliseconds": 1000
+                "Topic": "local.user"
             },
             "Notifiers": {
                 "NotifierLikeContentConfig": {
-                    "Hosts": "127.0.0.1",
-                    "KafkaAuth": {},
-                    "Tls": true,
-                    "MaxRetryCount": 3,
-                    "FlushTimeMilliseconds": 100,
-                    "FlushAtSize": 20,
                     "Topic": {
-                        "Name": "local.likes",
-                        "NumPartitions": 12,
-                        "ReplicationFactor": 2
+                        "Name": "local.likes"
                     }
                 },
                 "NotifierLikesCounterConfig": {
-                    "WorkerPoolSize": 128,
-                    "PollTimeMs": 2000,
                     "KafkaTopic": {
-                        "Name": "local.likes_count",
-                        "NumPartitions": 0,
-                        "ReplicationFactor": 0
-                    },
-                    "KafkaWriter": {
-                        "Hosts": "localhost:9093",
-                        "Tls": true,
-                        "KafkaAuth": {}
+                        "Name": "local.likes_count"
                     }
                 },
                 "NotifierUserLikesCounterConfig": {
-                    "WorkerPoolSize": 128,
-                    "PollTimeMs": 2000,
                     "KafkaTopic": {
-                        "Name": "local.likes_received_by_user_count",
-                        "NumPartitions": 0,
-                        "ReplicationFactor": 0
-                    },
-                    "KafkaWriter": {
-                        "Hosts": "localhost:9093",
-                        "Tls": true,
-                        "KafkaAuth": {}
+                        "Name": "local.likes_received_by_user_count"
                     }
                 }
-            },
-            "Scylla": {
-                "Hosts": "127.0.0.1",
-                "UserName": "",
-                "Password": "",
-                "Keyspace": "local_like",
-                "PageSize": 0,
-                "NumConns": 12,
-                "MaxRoutingKeyInfo": 3000,
-                "MaxPreparedStmts": 3000
             }
         },
         "UserCategory": {
-            "MaxPoolSize": 5,
-            "EventsFlushInterval": 100,
             "Notifiers": {
                 "CategorySubscriptionNotifier": {
-                    "Hosts": "127.0.0.1",
-                    "KafkaAuth": {},
-                    "Tls": true,
-                    "MaxRetryCount": 3,
-                    "FlushTimeMilliseconds": 100,
-                    "FlushAtSize": 20,
                     "Topic": {
-                        "Name": "local.category_subscription",
-                        "NumPartitions": 12,
-                        "ReplicationFactor": 2
+                        "Name": "local.category_subscription"
                     }
                 }
-            },
-            "Scylla": {
-                "Hosts": "127.0.0.1",
-                "UserName": "",
-                "Password": "",
-                "Keyspace": "local_category",
-                "PageSize": 0,
-                "NumConns": 12,
-                "MaxRoutingKeyInfo": 3000,
-                "MaxPreparedStmts": 3000
             }
         },
         "UserHashtag": {
-            "MaxPoolSize": 5,
-            "EventsFlushInterval": 100,
             "Notifiers": {
                 "HashtagSubscriptionNotifier": {
-                    "Hosts": "127.0.0.1",
-                    "KafkaAuth": {},
-                    "Tls": true,
-                    "MaxRetryCount": 3,
-                    "FlushTimeMilliseconds": 100,
-                    "FlushAtSize": 20,
                     "Topic": {
-                        "Name": "local.hashtag_subscription",
-                        "NumPartitions": 12,
-                        "ReplicationFactor": 2
+                        "Name": "local.hashtag_subscription"
                     }
                 }
-            },
-            "Scylla": {
-                "Hosts": "127.0.0.1",
-                "UserName": "",
-                "Password": "",
-                "Keyspace": "local_hashtag",
-                "PageSize": 0,
-                "NumConns": 12,
-                "MaxRoutingKeyInfo": 3000,
-                "MaxPreparedStmts": 3000
             }
         },
         "Love": {
-            "EventsFlushIntervalMs": 100,
-            "Scylla": {
-                "Hosts": "127.0.0.1",
-                "UserName": "",
-                "Password": "",
-                "Keyspace": "local_love",
-                "PageSize": 0,
-                "NumConns": 12,
-                "MaxRoutingKeyInfo": 3000,
-                "MaxPreparedStmts": 3000
-            },
-            "KafkaWriter": {
-                "Hosts": "127.0.0.1",
-                "KafkaAuth": {},
-                "Tls": true
-            },
             "Notifiers": {
                 "LoveContent": {
                     "KafkaTopic": {
-                        "Name": "local.loves",
-                        "NumPartitions": 0,
-                        "ReplicationFactor": 0
-                    },
-                    "PollTimeMs": 2000,
-                    "WorkerPoolSize": 128
+                        "Name": "local.loves"
+                    }
                 },
                 "LovesCounter": {
                     "KafkaTopic": {
-                        "Name": "local.loves_count",
-                        "NumPartitions": 0,
-                        "ReplicationFactor": 0
-                    },
-                    "PollTimeMs": 2000,
-                    "WorkerPoolSize": 128
+                        "Name": "local.loves_count"
+                    }
                 },
                 "UserLovesCounter": {
                     "KafkaTopic": {
-                        "Name": "local.loves_received_by_user_count",
-                        "NumPartitions": 0,
-                        "ReplicationFactor": 0
-                    },
-                    "PollTimeMs": 2000,
-                    "WorkerPoolSize": 128
+                        "Name": "local.loves_received_by_user_count"
+                    }
                 }
             }
         },
         "Dislike": {
-            "EventsFlushIntervalMs": 100,
-            "Scylla": {
-                "Hosts": "127.0.0.1",
-                "UserName": "",
-                "Password": "",
-                "Keyspace": "local_dislike",
-                "PageSize": 0,
-                "NumConns": 12,
-                "MaxRoutingKeyInfo": 3000,
-                "MaxPreparedStmts": 3000
-            },
-            "KafkaWriter": {
-                "Hosts": "127.0.0.1",
-                "KafkaAuth": {},
-                "Tls": true
-            },
             "Notifiers": {
                 "DislikeContent": {
                     "KafkaTopic": {
-                        "Name": "local.dislikes",
-                        "NumPartitions": 0,
-                        "ReplicationFactor": 0
-                    },
-                    "PollTimeMs": 2000,
-                    "WorkerPoolSize": 128
+                        "Name": "local.dislikes"
+                    }
                 },
                 "DislikesCounter": {
                     "KafkaTopic": {
-                        "Name": "local.dislikes_count",
-                        "NumPartitions": 0,
-                        "ReplicationFactor": 0
-                    },
-                    "PollTimeMs": 2000,
-                    "WorkerPoolSize": 128
+                        "Name": "local.dislikes_count"
+                    }
                 },
                 "UserDislikesCounter": {
                     "KafkaTopic": {
-                        "Name": "local.dislikes_received_by_user_count",
-                        "NumPartitions": 0,
-                        "ReplicationFactor": 0
-                    },
-                    "PollTimeMs": 2000,
-                    "WorkerPoolSize": 128
+                        "Name": "local.dislikes_received_by_user_count"
+                    }
                 }
             }
         },
         "Reaction": {
-            "EventsFlushIntervalMs": 100,
-            "Scylla": {
-                "Hosts": "scylla-infra-dta-eu-west-1a.digitalmonster.link:9042",
-                "UserName": "",
-                "Password": "",
-                "Keyspace": "local_spot",
-                "PageSize": 0,
-                "NumConns": 12,
-                "MaxRoutingKeyInfo": 3000,
-                "MaxPreparedStmts": 3000
-            },
-            "KafkaWriter": {
-                "Hosts": "127.0.0.1",
-                "KafkaAuth": {},
-                "Tls": true
-            },
             "Notifiers": {
                 "ContentLovesCounter": {
                     "KafkaTopic": {
-                        "Name": "local.loves_count",
-                        "NumPartitions": 0,
-                        "ReplicationFactor": 0
-                    },
-                    "PollTimeMs": 2000,
-                    "WorkerPoolSize": 128
+                        "Name": "local.loves_count"
+                    }
                 },
                 "ContentLikesCounter": {
                     "KafkaTopic": {
-                        "Name": "local.likes_count",
-                        "NumPartitions": 0,
-                        "ReplicationFactor": 0
-                    },
-                    "PollTimeMs": 2000,
-                    "WorkerPoolSize": 128
+                        "Name": "local.likes_count"
+                    }
                 },
                 "ContentDislikesCounter": {
                     "KafkaTopic": {
-                        "Name": "local.dislikes_count",
-                        "NumPartitions": 0,
-                        "ReplicationFactor": 0
-                    },
-                    "PollTimeMs": 2000,
-                    "WorkerPoolSize": 128
+                        "Name": "local.dislikes_count"
+                    }
                 },
                 "SpotUserLikesCounter": {
                     "KafkaTopic": {
-                        "Name": "local.spot_author_likes_count",
-                        "NumPartitions": 0,
-                        "ReplicationFactor": 0
-                    },
-                    "WorkerPoolSize": 128,
-                    "PollTimeMs": 2000
+                        "Name": "local.spot_author_likes_count"
+                    }
                 },
                 "SpotUserLovesCounter": {
                     "KafkaTopic": {
-                        "Name": "local.spot_author_loves_count",
-                        "NumPartitions": 0,
-                        "ReplicationFactor": 0
-                    },
-                    "WorkerPoolSize": 128,
-                    "PollTimeMs": 2000
+                        "Name": "local.spot_author_loves_count"
+                    }
                 },
                 "MusicUserLikesCounter": {
                     "KafkaTopic": {
-                        "Name": "local.music_author_dislikes_count",
-                        "NumPartitions": 0,
-                        "ReplicationFactor": 0
-                    },
-                    "WorkerPoolSize": 128,
-                    "PollTimeMs": 2000
+                        "Name": "local.music_author_dislikes_count"
+                    }
                 },
                 "MusicUserLovesCounter": {
                     "KafkaTopic": {
-                        "Name": "local.music_author_likes_count",
-                        "NumPartitions": 0,
-                        "ReplicationFactor": 0
-                    },
-                    "WorkerPoolSize": 128,
-                    "PollTimeMs": 2000
+                        "Name": "local.music_author_likes_count"
+                    }
                 },
                 "MusicUserDislikesCounter": {
                     "KafkaTopic": {
-                        "Name": "local.music_author_loves_count",
-                        "NumPartitions": 0,
-                        "ReplicationFactor": 0
-                    },
-                    "WorkerPoolSize": 128,
-                    "PollTimeMs": 2000
+                        "Name": "local.music_author_loves_count"
+                    }
                 },
                 "SpotUserDislikesCounter": {
                     "KafkaTopic": {
-                        "Name": "local.music_author_dislikes_count",
-                        "NumPartitions": 0,
-                        "ReplicationFactor": 0
-                    },
-                    "WorkerPoolSize": 128,
-                    "PollTimeMs": 2000
+                        "Name": "local.music_author_dislikes_count"
+                    }
                 }
             }
         },
         "View": {
-            "EventsFlushIntervalMs": 100,
-            "Scylla": {
-                "Hosts": "127.0.0.1",
-                "UserName": "",
-                "Password": "",
-                "Keyspace": "local_view",
-                "PageSize": 0,
-                "NumConns": 12,
-                "MaxRoutingKeyInfo": 3000,
-                "MaxPreparedStmts": 3000
-            },
-            "KafkaWriter": {
-                "Hosts": "",
-                "KafkaAuth": {},
-                "Tls": true
-            },
             "Listeners": {
                 "ContentDeleted": {
-                    "Hosts": "127.0.0.1",
-                    "MinBytes": 100,
-                    "MaxBytes": 10000000,
-                    "Tls": true,
                     "GroupId": "local_views_content_delete_listener",
                     "Topic": "local.content"
                 }
@@ -792,195 +371,104 @@
             "Notifiers": {
                 "CategoryViews": {
                     "KafkaTopic": {
-                        "Name": "local.category_views",
-                        "NumPartitions": 0,
-                        "ReplicationFactor": 0
-                    },
-                    "PollTimeMs": 2000,
-                    "WorkerPoolSize": 128
+                        "Name": "local.category_views"
+                    }
                 },
                 "ContentViews": {
                     "KafkaTopic": {
-                        "Name": "local.view_stats_update",
-                        "NumPartitions": 0,
-                        "ReplicationFactor": 0
-                    },
-                    "PollTimeMs": 2000,
-                    "WorkerPoolSize": 128
+                        "Name": "local.view_stats_update"
+                    }
                 },
                 "HashtagViews": {
                     "KafkaTopic": {
-                        "Name": "local.hashtag_views",
-                        "NumPartitions": 0,
-                        "ReplicationFactor": 0
-                    },
-                    "PollTimeMs": 2000,
-                    "WorkerPoolSize": 128
+                        "Name": "local.hashtag_views"
+                    }
                 },
                 "OwnerViews": {
                     "KafkaTopic": {
-                        "Name": "local.views_received_by_user_count",
-                        "NumPartitions": 0,
-                        "ReplicationFactor": 0
-                    },
-                    "PollTimeMs": 2000,
-                    "WorkerPoolSize": 128
+                        "Name": "local.views_received_by_user_count"
+                    }
                 },
                 "UserContent": {
                     "KafkaTopic": {
-                        "Name": "local.view_content",
-                        "NumPartitions": 0,
-                        "ReplicationFactor": 0
-                    },
-                    "PollTimeMs": 2000,
-                    "WorkerPoolSize": 128
+                        "Name": "local.view_content"
+                    }
                 },
                 "UserView": {
                     "KafkaTopic": {
-                        "Name": "local.today_watch_time",
-                        "NumPartitions": 0,
-                        "ReplicationFactor": 0
-                    },
-                    "PollTimeMs": 2000,
-                    "WorkerPoolSize": 128
+                        "Name": "local.today_watch_time"
+                    }
                 },
                 "UserTotalWatch": {
                     "KafkaTopic": {
-                        "Name": "local.total_watch_time",
-                        "NumPartitions": 0,
-                        "ReplicationFactor": 0
-                    },
-                    "PollTimeMs": 2000,
-                    "WorkerPoolSize": 128
+                        "Name": "local.total_watch_time"
+                    }
                 }
-            },
-            "CounterProcessor": {
-                "UserMaxDailyUniqueViews": 5,
-                "PollTimeMs": 2000,
-                "WorkerPoolSize": 128
             }
         },
         "Follow": {
-            "EventsFlushIntervalMs": 100,
-            "Scylla": {
-                "Hosts": "127.0.0.1",
-                "UserName": "",
-                "Password": "",
-                "Keyspace": "local_follow",
-                "PageSize": 0,
-                "NumConns": 12,
-                "MaxRoutingKeyInfo": 3000,
-                "MaxPreparedStmts": 3000
-            },
-            "KafkaWriter": {
-                "Hosts": "127.0.0.1:9093",
-                "KafkaAuth": {},
-                "Tls": true
-            },
             "Notifiers": {
                 "FollowNotifier": {
                     "KafkaTopic": {
-                        "Name": "local.follows",
-                        "NumPartitions": 0,
-                        "ReplicationFactor": 0
-                    },
-                    "PollTimeMs": 2000
+                        "Name": "local.follows"
+                    }
                 },
                 "FollowCounterNotifier": {
                     "KafkaTopic": {
-                        "Name": "local.follows_counter",
-                        "NumPartitions": 0,
-                        "ReplicationFactor": 0
-                    },
-                    "PollTimeMs": 2000
+                        "Name": "local.follows_counter"
+                    }
                 },
                 "TodayFollowersCounterNotifier": {
                     "KafkaTopic": {
-                        "Name": "local.today_followers_counter",
-                        "NumPartitions": 0,
-                        "ReplicationFactor": 0
-                    },
-                    "PollTimeMs": 2000
+                        "Name": "local.today_followers_counter"
+                    }
                 },
                 "UniqueFollowersPerDayCountNotifier": {
                     "KafkaTopic": {
-                        "Name": "local.unique_followers_per_day_count",
-                        "NumPartitions": 0,
-                        "ReplicationFactor": 0
+                        "Name": "local.unique_followers_per_day_count"
                     }
                 }
             },
             "Listeners": {
                 "UserDeleted": {
-                    "Hosts": "",
-                    "KafkaAuth": {},
                     "GroupId": "user-follow-backend",
-                    "Topic": "local.user",
-                    "MinBytes": 100,
-                    "MaxBytes": 500000,
-                    "MaxBatchSize": 17000,
-                    "ListenerDuration": 5,
-                    "Tls": true
+                    "Topic": "local.user"
                 },
                 "UserBlocked": {
-                    "Hosts": "",
-                    "KafkaAuth": {},
                     "GroupId": "user-block-follow-backend",
-                    "Topic": "local.user_blocked",
-                    "MinBytes": 100,
-                    "MaxBytes": 500000,
-                    "MaxBatchSize": 17000,
-                    "ListenerDuration": 5,
-                    "Tls": true
+                    "Topic": "local.user_blocked"
                 }
             }
-        },
-        "ApmConfig": {
-            "LogLevel": "error",
-            "ServiceName": "front-comments",
-            "ServerUrls": "http://apm.localhost"
         }
     },
     {
         "repo-name": "follows",
         "UserKafka": {
-            "KafkaAuth": {},
             "GroupId": "user-follow-backend",
-            "Topic": "local.user",
-            "ListenerDuration": 5
+            "Topic": "local.user"
         },
         "UserBlockKafka": {
-            "KafkaAuth": {},
             "GroupId": "user-block-follow-backend",
-            "Topic": "local.user_blocked",
-            "ListenerDuration": 5
+            "Topic": "local.user_blocked"
         },
         "NotifierFollowConfig": {
             "KafkaTopic": {
-                "Name": "local.follows",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "local.follows"
             }
         },
         "NotifierFollowCounterConfig": {
             "KafkaTopic": {
-                "Name": "local.follows_counter",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "local.follows_counter"
             }
         },
         "NotifierTodayFollowersCounterConfig": {
             "KafkaTopic": {
-                "Name": "local.today_followers_counter",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "local.today_followers_counter"
             }
         },
         "NotifierUniqueFollowersPerDayCountConfig": {
             "KafkaTopic": {
-                "Name": "local.unique_followers_per_day_count",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "local.unique_followers_per_day_count"
             }
         }
     },
@@ -988,31 +476,22 @@
         "repo-name": "likes",
         "NotifierLikeContentConfig": {
             "KafkaTopic": {
-                "Name": "local.likes",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "local.likes"
             }
         },
         "NotifierLikesCounterConfig": {
             "KafkaTopic": {
-                "Name": "local.likes_count",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "local.likes_count"
             }
         },
         "NotifierUserLikesCounterConfig": {
             "KafkaTopic": {
-                "Name": "local.likes_received_by_user_count",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "local.likes_received_by_user_count"
             }
         },
         "UserListener": {
-            "KafkaAuth": {},
             "GroupId": "local-user-like-backend",
-            "Topic": "local.user",
-            "MaxBackOffTimeMilliseconds": 60000,
-            "BackOffTimeIntervalMilliseconds": 1000
+            "Topic": "local.user"
         }
     },
     {
@@ -1022,75 +501,33 @@
             "Listeners": {
                 "DislikeCounter": {
                     "Kafka": {
-                        "Hosts": "127.0.0.1",
-                        "KafkaAuth": {},
-                        "MinBytes": 100,
-                        "MaxBytes": 100000000,
-                        "Tls": true,
                         "GroupId": "local_back_dislike_consumer",
-                        "Topic": "local.dislikes_count",
-                        "MaxBackOffTimeMilliseconds": 60000,
-                        "BackOffTimeIntervalMilliseconds": 1000
-                    },
-                    "MaxDuration": 500,
-                    "MaxBatchSize": 1000,
-                    "WorkerPoolSize": 5
+                        "Topic": "local.dislikes_count"
+                    }
                 },
                 "LoveCounter": {
                     "Kafka": {
-                        "Hosts": "127.0.0.1",
-                        "KafkaAuth": {},
-                        "MinBytes": 100,
-                        "MaxBytes": 100000000,
-                        "Tls": true,
                         "GroupId": "local_back_love_consumer",
-                        "Topic": "local.loves_count",
-                        "MaxBackOffTimeMilliseconds": 60000,
-                        "BackOffTimeIntervalMilliseconds": 1000
-                    },
-                    "MaxDuration": 500,
-                    "MaxBatchSize": 1000,
-                    "WorkerPoolSize": 5
+                        "Topic": "local.loves_count"
+                    }
                 },
                 "LikeCounter": {
                     "Kafka": {
-                        "Hosts": "127.0.0.1",
-                        "KafkaAuth": {},
-                        "MinBytes": 100,
-                        "MaxBytes": 100000000,
-                        "Tls": true,
                         "GroupId": "local_back_like_consumer",
-                        "Topic": "local.likes_count",
-                        "MaxBackOffTimeMilliseconds": 60000,
-                        "BackOffTimeIntervalMilliseconds": 1000
-                    },
-                    "MaxDuration": 500,
-                    "MaxBatchSize": 1000,
-                    "WorkerPoolSize": 5
+                        "Topic": "local.likes_count"
+                    }
                 },
                 "ListenCounter": {
                     "Kafka": {
-                        "Hosts": "127.0.0.1",
-                        "KafkaAuth": {},
-                        "MinBytes": 100,
-                        "MaxBytes": 100000000,
-                        "Tls": true,
                         "GroupId": "local_back_listen_consumer",
-                        "Topic": "local.view_stats_update",
-                        "MaxBackOffTimeMilliseconds": 60000,
-                        "BackOffTimeIntervalMilliseconds": 1000
-                    },
-                    "MaxDuration": 500,
-                    "MaxBatchSize": 1000,
-                    "WorkerPoolSize": 5
+                        "Topic": "local.view_stats_update"
+                    }
                 }
             }
         },
         "NotifierCreatorsConfig": {
             "KafkaTopic": {
-                "Name": "local.creators",
-                "NumPartitions": 12,
-                "ReplicationFactor": 2
+                "Name": "local.creators"
             }
         }
     },
@@ -1103,25 +540,6 @@
         "EmailListener": {
             "GroupId": "local_notification_gateway_email_listener",
             "Topic": "local.email"
-        },
-        "SmsProviders": {
-            "CheapGlobalSms": {
-                "ApiUrl": "https://cheapglobalsms.com/api_v1",
-                "Account": "",
-                "Password": "",
-                "SmsType": 0,
-                "UnicodeSupport": 2,
-                "SenderDisplayName": "",
-                "RouteType": 0
-            }
-        },
-        "SelectedSmsProvider": 1,
-        "EmailProviders": {
-            "SES": {
-                "Region": "us-west-2",
-                "CharSet": "UTF-8",
-                "Sender": "lit@lit.it"
-            }
         },
         "SelectedEmailProvider": 1
     },
@@ -1182,11 +600,6 @@
         "UserUpdateListener": {
             "GroupId": "local_notification_handler_user_update_listener",
             "Topic": "local.user"
-        },
-        "EmailLinks": {
-            "VerifyHost": "",
-            "VerifyPath": "",
-            "MarketingSite": ""
         }
     },
     {
@@ -1234,24 +647,12 @@
         "Referrer": {
             "UserVerifiedConfig": {
                 "Listener": {
-                    "Hosts": "127.0.0.1",
-                    "MinBytes": 100,
-                    "MaxBytes": 10000000,
-                    "Tls": true,
-                    "MaxDuration": 2,
-                    "MaxBatchSize": 1000,
                     "GroupId": "local_referrer_verified_listener",
                     "Topic": "local.referrer_verified"
                 }
             },
             "UserDeletedConfig": {
                 "Listener": {
-                    "Hosts": "127.0.0.1",
-                    "MinBytes": 100,
-                    "MaxBytes": 10000000,
-                    "Tls": true,
-                    "MaxDuration": 2,
-                    "MaxBatchSize": 1000,
                     "GroupId": "local_referrer_deleted_listener",
                     "Topic": "local.referrer_verified"
                 }
@@ -1269,199 +670,117 @@
             "GroupId": "local_tokenomics_new_config_listener",
             "Topic": "local.new_config"
         },
-        "CommonConfig": {
-            "PointsThresholdForUserWithoutKYC": 10,
-            "PointBaseRate": 1,
-            "TokenReserveSupply": 1000,
-            "TokenTotalSupply": 10000,
-            "PointToToken": 1000
-        },
+        "CommonConfig": {},
         "NotifierUserStatsConfig": {
             "Topic": {
-                "Name": "local.user_points_stats_update",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "local.user_points_stats_update"
             },
             "RetryCount": 3
         },
         "User": {
             "Listeners": {
                 "KycVerification": {
-                    "Hosts": "127.0.0.1",
                     "Topic": "local.user",
-                    "GroupId": "local_tokenomics_kyc_status_listener",
-                    "MinBytes": 100,
-                    "MaxBytes": 10000000,
-                    "Tls": true
+                    "GroupId": "local_tokenomics_kyc_status_listener"
                 },
                 "GrandReferrer": {
-                    "Hosts": "127.0.0.1",
                     "Topic": "local.user",
-                    "GroupId": "local_tokenomics_grand_referrer_listener",
-                    "MinBytes": 100,
-                    "MaxBytes": 10000000,
-                    "Tls": true
+                    "GroupId": "local_tokenomics_grand_referrer_listener"
                 },
                 "ContentCreator": {
-                    "Hosts": "127.0.0.1",
                     "Topic": "local.creators",
-                    "GroupId": "local_tokenomics_creators_listener",
-                    "MinBytes": 100,
-                    "MaxBytes": 10000000,
-                    "Tls": true
+                    "GroupId": "local_tokenomics_creators_listener"
                 }
             },
             "UserTags": {
                 "Listener": {
-                    "Hosts": "127.0.0.1",
                     "Topic": "local.user",
-                    "GroupId": "local_tokenomics_user_tags_listener",
-                    "MinBytes": 100,
-                    "MaxBytes": 10000000,
-                    "Tls": true
+                    "GroupId": "local_tokenomics_user_tags_listener"
                 }
             }
         },
         "Reward": {
             "FirstNSocialMedias": {
                 "Listener": {
-                    "Hosts": "127.0.0.1",
                     "Topic": "local.profile",
-                    "GroupId": "local_tokenomics_first_social_medias_listener",
-                    "MinBytes": 100,
-                    "MaxBytes": 10000000,
-                    "Tls": true
+                    "GroupId": "local_tokenomics_first_social_medias_listener"
                 }
             },
             "FirstAvatar": {
                 "Listener": {
-                    "Hosts": "127.0.0.1",
                     "Topic": "local.user",
-                    "GroupId": "local_tokenomics_first_avatar_listener",
-                    "MinBytes": 100,
-                    "MaxBytes": 10000000,
-                    "Tls": true
+                    "GroupId": "local_tokenomics_first_avatar_listener"
                 }
             },
             "FirstBio": {
                 "Listener": {
-                    "Hosts": "127.0.0.1",
                     "Topic": "local.user",
-                    "GroupId": "local_tokenomics_first_bio_listener",
-                    "MinBytes": 100,
-                    "MaxBytes": 10000000,
-                    "Tls": true
+                    "GroupId": "local_tokenomics_first_bio_listener"
                 }
             },
             "FirstVideoUpload": {
                 "Listener": {
-                    "Hosts": "127.0.0.1",
                     "Topic": "local.content",
-                    "GroupId": "local_tokenomics_first_video_upload_listener",
-                    "MinBytes": 100,
-                    "MaxBytes": 10000000,
-                    "Tls": true
+                    "GroupId": "local_tokenomics_first_video_upload_listener"
                 }
             },
             "FirstBioVideoUpload": {
                 "Listener": {
-                    "Hosts": "127.0.0.1",
                     "Topic": "local.content",
-                    "GroupId": "local_tokenomics_first_bio_video_upload_listener",
-                    "MinBytes": 100,
-                    "MaxBytes": 10000000,
-                    "Tls": true
+                    "GroupId": "local_tokenomics_first_bio_video_upload_listener"
                 }
             },
             "FirstSpotUpload": {
                 "Listener": {
-                    "Hosts": "127.0.0.1",
                     "Topic": "local.content",
-                    "GroupId": "local_tokenomics_first_spot_upload_listener",
-                    "MinBytes": 100,
-                    "MaxBytes": 10000000,
-                    "Tls": true
+                    "GroupId": "local_tokenomics_first_spot_upload_listener"
                 }
             },
             "TopSpot": {
                 "Listener": {
-                    "Hosts": "127.0.0.1",
                     "Topic": "local.top_spots",
-                    "GroupId": "local_tokenomics_top_spots_listener",
-                    "MinBytes": 100,
-                    "MaxBytes": 10000000,
-                    "Tls": true
+                    "GroupId": "local_tokenomics_top_spots_listener"
                 }
             },
             "SocialSubsTargetAchieved": {
                 "Listener": {
-                    "Hosts": "127.0.0.1",
                     "Topic": "local.user_social_subs",
-                    "GroupId": "local_tokenomics_social_subs_target_achieved_listener",
-                    "MinBytes": 100,
-                    "MaxBytes": 10000000,
-                    "Tls": true
+                    "GroupId": "local_tokenomics_social_subs_target_achieved_listener"
                 }
             }
         },
         "Feature": {
             "Publisher": {
                 "Topic": {
-                    "Name": "local.feature_bought",
-                    "NumPartitions": 3,
-                    "ReplicationFactor": 1
-                },
-                "Hosts": "127.0.0.1",
-                "Tls": true,
-                "MaxRetryCount": 5,
-                "FlushAtSize": 7
+                    "Name": "local.feature_bought"
+                }
             }
         },
         "PaidFeaturePublisher": {
             "Topic": {
-                "Name": "local.feature_bought",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "local.feature_bought"
             }
         },
         "ContentPaidTimeIncreasedPublisher": {
             "Topic": {
-                "Name": "local.content_paid_time_increased",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "local.content_paid_time_increased"
             }
         },
         "UserPaidSessionPublisher": {
             "Topic": {
-                "Name": "local.user_paid_session",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "local.user_paid_session"
             }
         },
         "TokenomicsV2": {
             "PaidSessionListener": {
-                "Hosts": "127.0.0.1",
                 "Topic": "local.user_paid_session",
-                "GroupId": "local_tokenomics_user_paid_session_listener",
-                "MinBytes": 100,
-                "MaxBytes": 10000000,
-                "Tls": true
+                "GroupId": "local_tokenomics_user_paid_session_listener"
             },
             "PaySharerListener": {
-                "Hosts": "127.0.0.1",
                 "Topic": "local.view_content",
-                "GroupId": "local_tokenomics_pay_sharer_listener",
-                "MinBytes": 100,
-                "MaxBytes": 10000000,
-                "Tls": true
+                "GroupId": "local_tokenomics_pay_sharer_listener"
             },
             "ContentPaidTimeIncreasedListener": {
-                "Hosts": "127.0.0.1",
-                "MinBytes": 100,
-                "MaxBytes": 10000000,
-                "Tls": true,
-                "MaxDuration": 1000000000,
-                "MaxBatchSize": 10000,
                 "GroupId": "local_tokenomics_content_paid_time_increased_listener",
                 "Topic": "local.content_paid_time_increased"
             }
@@ -1469,90 +788,63 @@
         "Withdrawal": {
             "RobotValidator": {
                 "Listener": {
-                    "Hosts": "127.0.0.1",
                     "Topic": "local.user",
-                    "GroupId": "local_tokenomics_new_robot_validator_listener",
-                    "MinBytes": 100,
-                    "MaxBytes": 10000000,
-                    "Tls": true
+                    "GroupId": "local_tokenomics_new_robot_validator_listener"
                 }
             }
         },
         "WithdrawalPublisher": {
             "Topic": {
-                "Name": "local.withdrawal",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "local.withdrawal"
             }
         },
         "NotificationsKafkaWriter": {},
         "NotifierNotificationsConfig": {
             "Topic": {
-                "Name": "local.notification_created",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "local.notification_created"
             }
         }
     },
     {
         "repo-name": "user-go",
-        "KafkaNotificationsWriter": {
-            "KafkaAuth": {}
-        },
         "NotifierCreatorsConfig": {
             "KafkaTopic": {
-                "Name": "dev.creators",
-                "NumPartitions": 12,
-                "ReplicationFactor": 2
+                "Name": "dev.creators"
             }
         },
         "AdminPushMessageNotifier": {
             "KafkaTopic": {
-                "Name": "dev.push_admin_messages",
-                "NumPartitions": 12,
-                "ReplicationFactor": 2
+                "Name": "dev.push_admin_messages"
             }
         },
         "AdminEmailMessageNotifier": {
             "KafkaTopic": {
-                "Name": "dev.email",
-                "NumPartitions": 12,
-                "ReplicationFactor": 2
+                "Name": "dev.email"
             }
         },
         "NotifierUserConfig": {
             "KafkaTopic": {
-                "Name": "dev.user",
-                "NumPartitions": 12,
-                "ReplicationFactor": 2
+                "Name": "dev.user"
             }
         },
         "NotifierProfileConfig": {
             "KafkaTopic": {
-                "Name": "dev.profile",
-                "NumPartitions": 12,
-                "ReplicationFactor": 2
+                "Name": "dev.profile"
             }
         },
         "NotifierBlockConfig": {
             "KafkaTopic": {
-                "Name": "dev.user_blocked",
-                "NumPartitions": 12,
-                "ReplicationFactor": 2
+                "Name": "dev.user_blocked"
             }
         },
         "NotifierEmailNotificationsConfig": {
             "KafkaTopic": {
-                "Name": "dev.notification_created",
-                "NumPartitions": 12,
-                "ReplicationFactor": 2
+                "Name": "dev.notification_created"
             }
         },
         "NotifierReferrerVerifiedConfig": {
             "KafkaTopic": {
-                "Name": "dev.referrer_verified",
-                "NumPartitions": 12,
-                "ReplicationFactor": 2
+                "Name": "dev.referrer_verified"
             }
         },
         "ListenerFeatureBought": {
@@ -1570,136 +862,74 @@
         "Referral": {
             "UserVerified": {
                 "Listener": {
-                    "Hosts": "127.0.0.1",
-                    "MinBytes": 100,
-                    "MaxBytes": 10000000,
-                    "Tls": true,
                     "GroupId": "local_user_go_user_verified_listener",
                     "Topic": "local.user"
                 }
             },
             "NotifierReferrerConfig": {
-                "Hosts": "localhost:9093",
-                "Tls": true,
-                "KafkaAuth": {},
-                "MaxRetryCount": 10,
-                "FlushTimeMilliseconds": 2000,
-                "FlushAtSize": 40,
                 "KafkaTopic": {
-                    "Name": "dev.referrer_verified",
-                    "NumPartitions": 0,
-                    "ReplicationFactor": 0
+                    "Name": "dev.referrer_verified"
                 }
-            },
-            "DeepLink": {
-                "HttpPort": 5412
             }
         },
         "Counters": {
             "Listeners": {
                 "SpotUserLikes": {
-                    "Hosts": "127.0.0.1",
-                    "MinBytes": 100,
-                    "MaxBytes": 10000000,
-                    "Tls": true,
                     "GroupId": "local_user_spot_user_likes_listener",
-                    "Topic": "local.spot_author_likes_count",
-                    "MaxDuration": 2,
-                    "MaxBatchSize": 10000
+                    "Topic": "local.spot_author_likes_count"
                 },
                 "SpotUserDislikes": {
-                    "Hosts": "127.0.0.1",
-                    "MinBytes": 100,
-                    "MaxBytes": 10000000,
-                    "Tls": true,
                     "GroupId": "local_user_spot_user_dislikes_listener",
-                    "Topic": "local.spot_author_dislikes_count",
-                    "MaxDuration": 2,
-                    "MaxBatchSize": 10000
+                    "Topic": "local.spot_author_dislikes_count"
                 },
                 "SpotUserLoves": {
-                    "Hosts": "127.0.0.1",
-                    "MinBytes": 100,
-                    "MaxBytes": 10000000,
-                    "Tls": true,
                     "GroupId": "local_user_spot_user_loves_listener",
-                    "Topic": "local.spot_author_loves_count",
-                    "MaxDuration": 2,
-                    "MaxBatchSize": 10000
+                    "Topic": "local.spot_author_loves_count"
                 }
             }
         },
         "User": {
             "FollowsCountersUpdated": {
                 "Listener": {
-                    "Hosts": "127.0.0.1",
-                    "MinBytes": 100,
-                    "MaxBytes": 10000000,
-                    "Tls": true,
                     "GroupId": "local_user_go_follows_counters_updated_listener",
                     "Topic": "local.follows_counter"
                 }
             },
             "FirstPaidWithdrawal": {
                 "Listener": {
-                    "Hosts": "127.0.0.1",
-                    "MinBytes": 100,
-                    "MaxBytes": 10000000,
-                    "Tls": true,
                     "GroupId": "local_user_go_first_paid_withdrawal_listener",
                     "Topic": "local.withdrawal"
                 }
             },
             "UploadStatsUpdate": {
                 "Listener": {
-                    "Hosts": "127.0.0.1",
-                    "MinBytes": 100,
-                    "MaxBytes": 10000000,
-                    "Tls": true,
                     "GroupId": "local_user_go_upload_stats_update_listener",
                     "Topic": "local.uploads_stats_update"
                 }
             },
             "SharesCounterUpdated": {
                 "Listener": {
-                    "Hosts": "127.0.0.1",
-                    "MinBytes": 100,
-                    "MaxBytes": 10000000,
-                    "Tls": true,
                     "GroupId": "local_user_go_shares_counter_updated_listener",
                     "Topic": "local.content_user_stats"
                 }
             },
             "UserSocialSubsPublisher": {
                 "Topic": {
-                    "Name": "local.user_social_subs",
-                    "NumPartitions": 0,
-                    "ReplicationFactor": 0
-                },
-                "Hosts": "127.0.0.1",
-                "Tls": true,
-                "FlushAtSize": 10,
-                "PollTimeMs": 2000
-            },
-            "ExportRecordsPerIteration": 1000
+                    "Name": "local.user_social_subs"
+                }
+            }
         },
         "Crm": {
             "UserUpdated": {
                 "Listener": {
-                    "MaxDuration": 15,
-                    "MaxBatchSize": 100,
-                    "Hosts": "127.0.0.1",
                     "Topic": "local.crm_user",
-                    "GroupId": "local_user_go_crm_user_updated",
-                    "Tls": true
+                    "GroupId": "local_user_go_crm_user_updated"
                 }
             }
         },
         "CrmUpdateUserNotifier": {
             "Topic": {
-                "Name": "local.crm_user",
-                "NumPartitions": "12",
-                "ReplicationFactor": "2"
+                "Name": "local.crm_user"
             }
         }
     },
@@ -1707,51 +937,37 @@
         "repo-name": "views",
         "NotifierContentViewsConfig": {
             "KafkaTopic": {
-                "Name": "local.view_stats_update",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "local.view_stats_update"
             }
         },
         "NotifierCategoryViewsConfig": {
             "KafkaTopic": {
-                "Name": "local.category_views",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "local.category_views"
             }
         },
         "NotifierHashtagViewsConfig": {
             "KafkaTopic": {
-                "Name": "local.hashtag_views",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "local.hashtag_views"
             }
         },
         "NotifierUserContentConfig": {
             "KafkaTopic": {
-                "Name": "local.view_content",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "local.view_content"
             }
         },
         "NotifierUserViewConfig": {
             "KafkaTopic": {
-                "Name": "local.today_watch_time",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "local.today_watch_time"
             }
         },
         "NotifierOwnerViewsConfig": {
             "KafkaTopic": {
-                "Name": "local.views_received_by_user_count",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "local.views_received_by_user_count"
             }
         },
         "NotifierUserTotalWatchConfig": {
             "KafkaTopic": {
-                "Name": "local.total_watch_time",
-                "NumPartitions": 0,
-                "ReplicationFactor": 0
+                "Name": "local.total_watch_time"
             }
         },
         "CounterProcessorConfig": {

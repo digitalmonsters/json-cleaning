@@ -1,6 +1,61 @@
 const fs = require('fs');
 let allOBJ = []
-
+let trks = [
+    "NumPartitions",
+    "KafkaWriter",'CounterProcessor',
+    "EmailLinks",
+    "KafkaNotificationsWriter",
+    "ReplicationFactor",
+    "Hosts",
+    "MinBytes",
+    "MaxBytes",
+    "KafkaAuth",
+    "Tls",
+    "EventsFlushIntervalMs",
+    "LimitPerUser",
+    "MaxBackOffTimeMilliseconds",
+    "BackOffTimeIntervalMilliseconds",
+    "LikeCoefficient", "BulkVideoConfig",
+    "FollowsKafka",
+    "ApmConfig",
+    "LikesKafka",
+    "ContentKafkaWriter",
+    "UserKafkaWriter",
+    "ShareCoefficient",
+    "CategoriesLimit",
+    "HashtagsLimit",
+    "WatchesLimit",
+    "LikesLimit",
+    "SharesLimit",
+    "MessagesChunkLenWrite",
+    "MessagesChunkLenRead",
+    "RecommendationsOn",
+    "SheetName",
+    "Scylla",
+    "MaxRetryCount",
+    "FlushTimeMilliseconds",
+    "FlushAtSize",
+    "MaxBatchSize",
+    "ListenerDuration",
+    "PollTimeMs",
+    "WorkerPoolSize",
+    "LogLevel",
+    "ServiceName",
+    "ServerUrls",
+    "ListenerDuration",
+    "MaxPoolSize",
+    "EventsFlushInterval",
+    "MaxDuration",
+    "MaxBatchSize", "SmsProviders", "SelectedSmsProvider", "EmailProviders",
+    "PointsThresholdForUserWithoutKYC", "ExportRecordsPerIteration",
+    "PointBaseRate",
+    "TokenReserveSupply",
+    "TokenTotalSupply",
+    "PointToToken", "DeepLink",
+    "PreferenceGenerator",
+        "LastActivityService",
+        "ShareTimeoutPerUserDays",
+]
 let normalizedPath = require("path").join(__dirname);
 require("fs").readdirSync(normalizedPath).forEach(function (file) {
     let ext = file.substring(file.lastIndexOf('.') + 1, file.length) || file;
@@ -12,6 +67,19 @@ require("fs").readdirSync(normalizedPath).forEach(function (file) {
     }
 });
 
+
+
+function cleanobj(obj) {
+    if (typeof obj == "object") {
+        Object.keys(obj).map(e => {
+            trks.map(j => delete obj[j])
+
+
+            cleanobj(obj[e])
+        })
+    }
+    return obj
+}
 
 function cleanFile(obj, fnm) {
     let trash = ["PrivateHttpPort", "SoundStripe", "S3", "QrConfig", "KafkaWriterConfig", "OnlineTimeoutMs", "KafkaWriter", "MigrationEnv",
@@ -59,7 +127,7 @@ function cleanFile(obj, fnm) {
         })
     })
 
-    allOBJ.push({["repo-name"] : fnm, ...obj});
+    allOBJ.push({["repo-name"] : fnm, ...cleanobj(obj)});
     // Object.keys(obj).map(e => {
         // let dir = require("path").join(__dirname, "cleaned", fnm)
         // if (!fs.existsSync(dir)) {

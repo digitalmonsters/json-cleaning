@@ -42,24 +42,12 @@
     "Referrer": {
         "UserVerifiedConfig": {
             "Listener": {
-                "Hosts": "127.0.0.1",
-                "MinBytes": 100,
-                "MaxBytes": 10000000,
-                "Tls": true,
-                "MaxDuration": 2,
-                "MaxBatchSize": 1000,
                 "GroupId": "local_referrer_verified_listener",
                 "Topic": "local.referrer_verified"
             }
         },
         "UserDeletedConfig": {
             "Listener": {
-                "Hosts": "127.0.0.1",
-                "MinBytes": 100,
-                "MaxBytes": 10000000,
-                "Tls": true,
-                "MaxDuration": 2,
-                "MaxBatchSize": 1000,
                 "GroupId": "local_referrer_deleted_listener",
                 "Topic": "local.referrer_verified"
             }
@@ -77,199 +65,117 @@
         "GroupId": "local_tokenomics_new_config_listener",
         "Topic": "local.new_config"
     },
-    "CommonConfig": {
-        "PointsThresholdForUserWithoutKYC": 10,
-        "PointBaseRate": 1,
-        "TokenReserveSupply": 1000,
-        "TokenTotalSupply": 10000,
-        "PointToToken": 1000
-    },
+    "CommonConfig": {},
     "NotifierUserStatsConfig": {
         "Topic": {
-            "Name": "local.user_points_stats_update",
-            "NumPartitions": 0,
-            "ReplicationFactor": 0
+            "Name": "local.user_points_stats_update"
         },
         "RetryCount": 3
     },
     "User": {
         "Listeners": {
             "KycVerification": {
-                "Hosts": "127.0.0.1",
                 "Topic": "local.user",
-                "GroupId": "local_tokenomics_kyc_status_listener",
-                "MinBytes": 100,
-                "MaxBytes": 10000000,
-                "Tls": true
+                "GroupId": "local_tokenomics_kyc_status_listener"
             },
             "GrandReferrer": {
-                "Hosts": "127.0.0.1",
                 "Topic": "local.user",
-                "GroupId": "local_tokenomics_grand_referrer_listener",
-                "MinBytes": 100,
-                "MaxBytes": 10000000,
-                "Tls": true
+                "GroupId": "local_tokenomics_grand_referrer_listener"
             },
             "ContentCreator": {
-                "Hosts": "127.0.0.1",
                 "Topic": "local.creators",
-                "GroupId": "local_tokenomics_creators_listener",
-                "MinBytes": 100,
-                "MaxBytes": 10000000,
-                "Tls": true
+                "GroupId": "local_tokenomics_creators_listener"
             }
         },
         "UserTags": {
             "Listener": {
-                "Hosts": "127.0.0.1",
                 "Topic": "local.user",
-                "GroupId": "local_tokenomics_user_tags_listener",
-                "MinBytes": 100,
-                "MaxBytes": 10000000,
-                "Tls": true
+                "GroupId": "local_tokenomics_user_tags_listener"
             }
         }
     },
     "Reward": {
         "FirstNSocialMedias": {
             "Listener": {
-                "Hosts": "127.0.0.1",
                 "Topic": "local.profile",
-                "GroupId": "local_tokenomics_first_social_medias_listener",
-                "MinBytes": 100,
-                "MaxBytes": 10000000,
-                "Tls": true
+                "GroupId": "local_tokenomics_first_social_medias_listener"
             }
         },
         "FirstAvatar": {
             "Listener": {
-                "Hosts": "127.0.0.1",
                 "Topic": "local.user",
-                "GroupId": "local_tokenomics_first_avatar_listener",
-                "MinBytes": 100,
-                "MaxBytes": 10000000,
-                "Tls": true
+                "GroupId": "local_tokenomics_first_avatar_listener"
             }
         },
         "FirstBio": {
             "Listener": {
-                "Hosts": "127.0.0.1",
                 "Topic": "local.user",
-                "GroupId": "local_tokenomics_first_bio_listener",
-                "MinBytes": 100,
-                "MaxBytes": 10000000,
-                "Tls": true
+                "GroupId": "local_tokenomics_first_bio_listener"
             }
         },
         "FirstVideoUpload": {
             "Listener": {
-                "Hosts": "127.0.0.1",
                 "Topic": "local.content",
-                "GroupId": "local_tokenomics_first_video_upload_listener",
-                "MinBytes": 100,
-                "MaxBytes": 10000000,
-                "Tls": true
+                "GroupId": "local_tokenomics_first_video_upload_listener"
             }
         },
         "FirstBioVideoUpload": {
             "Listener": {
-                "Hosts": "127.0.0.1",
                 "Topic": "local.content",
-                "GroupId": "local_tokenomics_first_bio_video_upload_listener",
-                "MinBytes": 100,
-                "MaxBytes": 10000000,
-                "Tls": true
+                "GroupId": "local_tokenomics_first_bio_video_upload_listener"
             }
         },
         "FirstSpotUpload": {
             "Listener": {
-                "Hosts": "127.0.0.1",
                 "Topic": "local.content",
-                "GroupId": "local_tokenomics_first_spot_upload_listener",
-                "MinBytes": 100,
-                "MaxBytes": 10000000,
-                "Tls": true
+                "GroupId": "local_tokenomics_first_spot_upload_listener"
             }
         },
         "TopSpot": {
             "Listener": {
-                "Hosts": "127.0.0.1",
                 "Topic": "local.top_spots",
-                "GroupId": "local_tokenomics_top_spots_listener",
-                "MinBytes": 100,
-                "MaxBytes": 10000000,
-                "Tls": true
+                "GroupId": "local_tokenomics_top_spots_listener"
             }
         },
         "SocialSubsTargetAchieved": {
             "Listener": {
-                "Hosts": "127.0.0.1",
                 "Topic": "local.user_social_subs",
-                "GroupId": "local_tokenomics_social_subs_target_achieved_listener",
-                "MinBytes": 100,
-                "MaxBytes": 10000000,
-                "Tls": true
+                "GroupId": "local_tokenomics_social_subs_target_achieved_listener"
             }
         }
     },
     "Feature": {
         "Publisher": {
             "Topic": {
-                "Name": "local.feature_bought",
-                "NumPartitions": 3,
-                "ReplicationFactor": 1
-            },
-            "Hosts": "127.0.0.1",
-            "Tls": true,
-            "MaxRetryCount": 5,
-            "FlushAtSize": 7
+                "Name": "local.feature_bought"
+            }
         }
     },
     "PaidFeaturePublisher": {
         "Topic": {
-            "Name": "local.feature_bought",
-            "NumPartitions": 0,
-            "ReplicationFactor": 0
+            "Name": "local.feature_bought"
         }
     },
     "ContentPaidTimeIncreasedPublisher": {
         "Topic": {
-            "Name": "local.content_paid_time_increased",
-            "NumPartitions": 0,
-            "ReplicationFactor": 0
+            "Name": "local.content_paid_time_increased"
         }
     },
     "UserPaidSessionPublisher": {
         "Topic": {
-            "Name": "local.user_paid_session",
-            "NumPartitions": 0,
-            "ReplicationFactor": 0
+            "Name": "local.user_paid_session"
         }
     },
     "TokenomicsV2": {
         "PaidSessionListener": {
-            "Hosts": "127.0.0.1",
             "Topic": "local.user_paid_session",
-            "GroupId": "local_tokenomics_user_paid_session_listener",
-            "MinBytes": 100,
-            "MaxBytes": 10000000,
-            "Tls": true
+            "GroupId": "local_tokenomics_user_paid_session_listener"
         },
         "PaySharerListener": {
-            "Hosts": "127.0.0.1",
             "Topic": "local.view_content",
-            "GroupId": "local_tokenomics_pay_sharer_listener",
-            "MinBytes": 100,
-            "MaxBytes": 10000000,
-            "Tls": true
+            "GroupId": "local_tokenomics_pay_sharer_listener"
         },
         "ContentPaidTimeIncreasedListener": {
-            "Hosts": "127.0.0.1",
-            "MinBytes": 100,
-            "MaxBytes": 10000000,
-            "Tls": true,
-            "MaxDuration": 1000000000,
-            "MaxBatchSize": 10000,
             "GroupId": "local_tokenomics_content_paid_time_increased_listener",
             "Topic": "local.content_paid_time_increased"
         }
@@ -277,28 +183,20 @@
     "Withdrawal": {
         "RobotValidator": {
             "Listener": {
-                "Hosts": "127.0.0.1",
                 "Topic": "local.user",
-                "GroupId": "local_tokenomics_new_robot_validator_listener",
-                "MinBytes": 100,
-                "MaxBytes": 10000000,
-                "Tls": true
+                "GroupId": "local_tokenomics_new_robot_validator_listener"
             }
         }
     },
     "WithdrawalPublisher": {
         "Topic": {
-            "Name": "local.withdrawal",
-            "NumPartitions": 0,
-            "ReplicationFactor": 0
+            "Name": "local.withdrawal"
         }
     },
     "NotificationsKafkaWriter": {},
     "NotifierNotificationsConfig": {
         "Topic": {
-            "Name": "local.notification_created",
-            "NumPartitions": 0,
-            "ReplicationFactor": 0
+            "Name": "local.notification_created"
         }
     }
 }

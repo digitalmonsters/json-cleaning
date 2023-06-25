@@ -1,10 +1,7 @@
 {
     "ConfigNotifier": {
-        "KafkaAuth": {},
         "Topic": {
-            "Name": "local.new_config",
-            "NumPartitions": 12,
-            "ReplicationFactor": 2
+            "Name": "local.new_config"
         }
     }
 }
