@@ -70,6 +70,7 @@ require("fs").readdirSync(normalizedPath).forEach(function (file) {
 
 
 function cleanobj(obj) {
+    // console.log(obj);
     if (typeof obj == "object") {
 
         Object.keys(obj).map(e => {
@@ -78,6 +79,11 @@ function cleanobj(obj) {
             cleanobj(obj[e])
 
 
+            // if(typeof obj[e] == "object" && e.indexOf("Listener")) {
+            //     obj["type"] = "Consumer"
+            //     console.log(typeof obj[e]);
+            //     console.log(obj);
+            // };
             // if(e.indexOf("Listener")>=0){
             //     obj[e]["type"] = "Consumer";
             // } else {
@@ -114,6 +120,7 @@ function cleanFile(obj, fnm) {
     function funcClean(obj) {
 
         Object.keys(obj).map(t => {
+            
             trashkeys.map(tk => {
                 if (t.toLocaleLowerCase().indexOf(tk) >= 0) {
                     delete obj[t]
@@ -161,10 +168,3 @@ function cleanFile(obj, fnm) {
 
 let allfile = require("path").join(__dirname, "cleaned", `allfile.json`)
 fs.writeFileSync(allfile, JSON.stringify(allOBJ, null, 4));
-
-
-// require(allfile).map(p => {
-//     Object.keys(p).map(e => {
-//         console.log("e", e, e.indexOf("Listener") >= 0, typeof p[e]);
-//     })
-// })

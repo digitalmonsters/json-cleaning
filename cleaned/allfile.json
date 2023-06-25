@@ -981,6 +981,14 @@
         }
     },
     {
+        "repo-name": "user-hashtags",
+        "NotifierHashtagConfig": {
+            "KafkaTopic": {
+                "Name": "local.hashtag_subscription"
+            }
+        }
+    },
+    {
         "repo-name": "views",
         "NotifierContentViewsConfig": {
             "KafkaTopic": {

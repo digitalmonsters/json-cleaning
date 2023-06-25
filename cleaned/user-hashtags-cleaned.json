@@ -1,0 +1,7 @@
+{
+    "NotifierHashtagConfig": {
+        "KafkaTopic": {
+            "Name": "local.hashtag_subscription"
+        }
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "HttpPort": 5211,
+    "PrivateHttpPort": 5211,
+    "MaxStmtsPerBatch": 130,
+    "Scylla": {
+      "Hosts": "127.0.0.1",
+      "UserName": "",
+      "Password": "",
+      "Keyspace": "local_hashtag",
+      "Enabled": true,
+      "PageSize": 5000000,
+      "NumConns": 128,
+      "MaxRoutingKeyInfo": 1000000,
+      "MaxPreparedStmts": 1000000,
+      "TimeoutSeconds": 10
+    },
+    "CdcKafka": {
+      "Hosts": "",
+      "KafkaAuth": {},
+      "GroupId": "hashtag-backend",
+      "Topic": "LocalCDCScylla.local_events.user_hashtag",
+      "MinBytes": 100,
+      "MaxBytes": 500000,
+      "MaxBatchSize": 17000,
+      "ListenerDuration": 5,
+      "Tls": true
+    },
+    "KafkaWriter": {
+      "Hosts": "",
+      "KafkaAuth": {},
+      "Tls": true
+    },
+    "NotifierHashtagConfig": {
+      "KafkaTopic": {
+        "Name": "local.hashtag_subscription",
+        "NumPartitions": 0,
+        "ReplicationFactor": 0
+      },
+      "PollTimeMs": 2000,
+      "WorkerPoolSize": 15
+    },
+    "ApmConfig": {
+      "LogLevel": "error",
+      "ServiceName": "back-hashtags",
+      "ServerUrls": "http://apm.localhost"
+    }
+  }
