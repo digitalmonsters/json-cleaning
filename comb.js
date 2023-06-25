@@ -163,8 +163,8 @@ let allfile = require("path").join(__dirname, "cleaned", `allfile.json`)
 fs.writeFileSync(allfile, JSON.stringify(allOBJ, null, 4));
 
 
-require(allfile).map(p => {
-    Object.keys(p).map(e => {
-        console.log("e", e, e.indexOf("Listener") >= 0, typeof p[e]);
-    })
-})
+// require(allfile).map(p => {
+//     Object.keys(p).map(e => {
+//         console.log("e", e, e.indexOf("Listener") >= 0, typeof p[e]);
+//     })
+// })
