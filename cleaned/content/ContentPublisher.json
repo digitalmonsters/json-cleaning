@@ -1,7 +1,0 @@
-{
-    "Topic": {
-        "Name": "local.content",
-        "NumPartitions": 0,
-        "ReplicationFactor": 0
-    }
-}

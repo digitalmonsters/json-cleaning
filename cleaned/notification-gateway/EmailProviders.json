@@ -1,7 +1,0 @@
-{
-    "SES": {
-        "Region": "us-west-2",
-        "CharSet": "UTF-8",
-        "Sender": "lit@lit.it"
-    }
-}

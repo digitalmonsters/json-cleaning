@@ -1,5 +1,0 @@
-{
-    "LogLevel": "error",
-    "ServiceName": "front-comments",
-    "ServerUrls": "http://apm.localhost"
-}

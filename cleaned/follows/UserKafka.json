@@ -1,6 +1,0 @@
-{
-    "KafkaAuth": {},
-    "GroupId": "user-follow-backend",
-    "Topic": "local.user",
-    "ListenerDuration": 5
-}

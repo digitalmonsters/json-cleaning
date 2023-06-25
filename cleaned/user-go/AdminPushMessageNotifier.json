@@ -1,7 +1,0 @@
-{
-    "KafkaTopic": {
-        "Name": "dev.push_admin_messages",
-        "NumPartitions": 12,
-        "ReplicationFactor": 2
-    }
-}

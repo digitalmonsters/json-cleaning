@@ -1,7 +1,0 @@
-{
-    "KafkaTopic": {
-        "Name": "local.content_comments_counter",
-        "NumPartitions": 0,
-        "ReplicationFactor": 0
-    }
-}

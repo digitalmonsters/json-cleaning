@@ -1,7 +1,0 @@
-{
-    "KafkaTopic": {
-        "Name": "local.today_watch_time",
-        "NumPartitions": 0,
-        "ReplicationFactor": 0
-    }
-}

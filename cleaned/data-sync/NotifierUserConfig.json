@@ -1,8 +1,0 @@
-{
-    "KafkaAuth": {},
-    "KafkaTopic": {
-        "Name": "dev.user",
-        "NumPartitions": 0,
-        "ReplicationFactor": 0
-    }
-}

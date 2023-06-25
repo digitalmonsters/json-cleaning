@@ -1,7 +1,0 @@
-{
-    "KafkaTopic": {
-        "Name": "local.views_received_by_user_count",
-        "NumPartitions": 0,
-        "ReplicationFactor": 0
-    }
-}

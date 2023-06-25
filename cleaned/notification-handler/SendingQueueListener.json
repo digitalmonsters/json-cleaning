@@ -1,4 +1,0 @@
-{
-    "GroupId": "local_notification_handler_sending_queue_listener",
-    "Topic": "local.handler_sending_queue"
-}

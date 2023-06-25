@@ -1,7 +1,0 @@
-{
-    "KafkaTopic": {
-        "Name": "dev.notification_created",
-        "NumPartitions": 12,
-        "ReplicationFactor": 2
-    }
-}

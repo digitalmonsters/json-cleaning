@@ -1,7 +1,0 @@
-{
-    "KafkaTopic": {
-        "Name": "dev.profile",
-        "NumPartitions": 12,
-        "ReplicationFactor": 2
-    }
-}

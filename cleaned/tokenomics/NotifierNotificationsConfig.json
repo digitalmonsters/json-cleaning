@@ -1,7 +1,0 @@
-{
-    "Topic": {
-        "Name": "local.notification_created",
-        "NumPartitions": 0,
-        "ReplicationFactor": 0
-    }
-}

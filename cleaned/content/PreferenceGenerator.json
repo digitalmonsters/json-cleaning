@@ -1,9 +1,0 @@
-{
-    "LikeCoefficient": 2,
-    "ShareCoefficient": 2,
-    "CategoriesLimit": 100,
-    "HashtagsLimit": 100,
-    "WatchesLimit": 1000,
-    "LikesLimit": 2000,
-    "SharesLimit": 2000
-}

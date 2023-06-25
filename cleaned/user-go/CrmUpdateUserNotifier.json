@@ -1,7 +1,0 @@
-{
-    "Topic": {
-        "Name": "local.crm_user",
-        "NumPartitions": "12",
-        "ReplicationFactor": "2"
-    }
-}

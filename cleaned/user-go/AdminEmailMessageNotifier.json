@@ -1,7 +1,0 @@
-{
-    "KafkaTopic": {
-        "Name": "dev.email",
-        "NumPartitions": 12,
-        "ReplicationFactor": 2
-    }
-}

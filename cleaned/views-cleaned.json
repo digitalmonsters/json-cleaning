@@ -1,6 +1,4 @@
 {
-    "MinContentDuration": 60,
-    "MaxPoolSize": 64,
     "NotifierContentViewsConfig": {
         "KafkaTopic": {
             "Name": "local.view_stats_update",

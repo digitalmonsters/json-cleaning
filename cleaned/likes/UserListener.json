@@ -1,7 +1,0 @@
-{
-    "KafkaAuth": {},
-    "GroupId": "local-user-like-backend",
-    "Topic": "local.user",
-    "MaxBackOffTimeMilliseconds": 60000,
-    "BackOffTimeIntervalMilliseconds": 1000
-}

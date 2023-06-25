@@ -1,7 +1,0 @@
-{
-    "Topic": {
-        "Name": "local.new_config",
-        "NumPartitions": 0,
-        "ReplicationFactor": 0
-    }
-}
