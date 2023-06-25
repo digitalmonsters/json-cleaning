@@ -1,0 +1,7 @@
+{
+    "KafkaTopic": {
+        "Name": "dev.referrer_verified",
+        "NumPartitions": 12,
+        "ReplicationFactor": 2
+    }
+}

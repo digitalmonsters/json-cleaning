@@ -1,0 +1,28 @@
+{
+    "PaidSessionListener": {
+        "Hosts": "127.0.0.1",
+        "Topic": "local.user_paid_session",
+        "GroupId": "local_tokenomics_user_paid_session_listener",
+        "MinBytes": 100,
+        "MaxBytes": 10000000,
+        "Tls": true
+    },
+    "PaySharerListener": {
+        "Hosts": "127.0.0.1",
+        "Topic": "local.view_content",
+        "GroupId": "local_tokenomics_pay_sharer_listener",
+        "MinBytes": 100,
+        "MaxBytes": 10000000,
+        "Tls": true
+    },
+    "ContentPaidTimeIncreasedListener": {
+        "Hosts": "127.0.0.1",
+        "MinBytes": 100,
+        "MaxBytes": 10000000,
+        "Tls": true,
+        "MaxDuration": 1000000000,
+        "MaxBatchSize": 10000,
+        "GroupId": "local_tokenomics_content_paid_time_increased_listener",
+        "Topic": "local.content_paid_time_increased"
+    }
+}

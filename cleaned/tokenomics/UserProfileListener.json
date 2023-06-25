@@ -1,0 +1,4 @@
+{
+    "GroupId": "local_tokenomics_user_profile_listener",
+    "Topic": "local.profile"
+}

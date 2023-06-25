@@ -1,0 +1,4 @@
+{
+    "GroupId": "local_notification_handler_follow_listener",
+    "Topic": "local.follows"
+}

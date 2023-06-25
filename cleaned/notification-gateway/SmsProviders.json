@@ -1,0 +1,11 @@
+{
+    "CheapGlobalSms": {
+        "ApiUrl": "https://cheapglobalsms.com/api_v1",
+        "Account": "",
+        "Password": "",
+        "SmsType": 0,
+        "UnicodeSupport": 2,
+        "SenderDisplayName": "",
+        "RouteType": 0
+    }
+}

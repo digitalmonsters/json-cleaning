@@ -1,0 +1,6 @@
+{
+    "ViewContentListener": {
+        "GroupId": "local_ads_view_content_listener",
+        "Topic": "local.view_content"
+    }
+}

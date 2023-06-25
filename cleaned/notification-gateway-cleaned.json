@@ -1,0 +1,30 @@
+{
+    "PushListener": {
+        "GroupId": "local_notification_gateway_push_listener",
+        "Topic": "local.push_messages"
+    },
+    "EmailListener": {
+        "GroupId": "local_notification_gateway_email_listener",
+        "Topic": "local.email"
+    },
+    "SmsProviders": {
+        "CheapGlobalSms": {
+            "ApiUrl": "https://cheapglobalsms.com/api_v1",
+            "Account": "",
+            "Password": "",
+            "SmsType": 0,
+            "UnicodeSupport": 2,
+            "SenderDisplayName": "",
+            "RouteType": 0
+        }
+    },
+    "SelectedSmsProvider": 1,
+    "EmailProviders": {
+        "SES": {
+            "Region": "us-west-2",
+            "CharSet": "UTF-8",
+            "Sender": "lit@lit.it"
+        }
+    },
+    "SelectedEmailProvider": 1
+}

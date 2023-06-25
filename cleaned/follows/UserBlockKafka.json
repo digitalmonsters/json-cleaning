@@ -1,0 +1,6 @@
+{
+    "KafkaAuth": {},
+    "GroupId": "user-block-follow-backend",
+    "Topic": "local.user_blocked",
+    "ListenerDuration": 5
+}

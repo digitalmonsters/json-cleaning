@@ -1,0 +1,7 @@
+{
+    "KafkaTopic": {
+        "Name": "local.likes_count",
+        "NumPartitions": 0,
+        "ReplicationFactor": 0
+    }
+}

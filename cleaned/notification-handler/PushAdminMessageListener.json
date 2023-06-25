@@ -1,0 +1,4 @@
+{
+    "GroupId": "local_notification_handler_push_admin_messages_listener",
+    "Topic": "local.push_admin_messages"
+}

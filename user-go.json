@@ -1,0 +1,347 @@
+{
+    "HttpPort": 5212,
+    "PrivateHttpPort": 5211,
+    "CDNBaseUrl": "",
+    "MasterDb": {
+      "Host": "localhost",
+      "Port": 5432,
+      "Db": "local_users",
+      "User": "postgres",
+      "Password": "qwerty"
+    },
+    "ReadonlyDb": {
+      "Host": "localhost",
+      "Port": 5432,
+      "Db": "local_users",
+      "User": "postgres",
+      "Password": "qwerty"
+    },
+    "Jobber": {
+      "Tls": true,
+      "DefaultQueue": "local_content_tasks",
+      "ResultExpire": 3600,
+      "Broker": "redis://127.0.0.1:6379",
+      "ResultBackend": "redis://127.0.0.1:6379",
+      "Lock": "redis://127.0.0.1:6379",
+      "Concurrency": 15
+    },
+    "Kyc": {
+      "NotifyDaysTo18Years": [
+        30,
+        15,
+        1
+      ]
+    },
+    "S3": {
+      "CdnDirectory": "",
+      "CdnUrl": "",
+      "Region": "eu-west-1",
+      "Bucket": ""
+    },
+    "KafkaWriter": {
+      "Hosts": "",
+      "KafkaAuth": {},
+      "Tls": true
+    },
+    "KafkaNotificationsWriter": {
+      "Hosts": "",
+      "KafkaAuth": {},
+      "Tls": true
+    },
+    "NotifierCreatorsConfig": {
+      "KafkaTopic": {
+        "Name": "dev.creators",
+        "NumPartitions": 12,
+        "ReplicationFactor": 2
+      },
+      "PollTimeMs": 2000
+    },
+    "AdminPushMessageNotifier": {
+      "KafkaTopic": {
+        "Name": "dev.push_admin_messages",
+        "NumPartitions": 12,
+        "ReplicationFactor": 2
+      },
+      "PollTimeMs": 2000
+    },
+    "AdminEmailMessageNotifier": {
+      "KafkaTopic": {
+        "Name": "dev.email",
+        "NumPartitions": 12,
+        "ReplicationFactor": 2
+      },
+      "PollTimeMs": 2000
+    },
+    "NotifierUserConfig": {
+      "KafkaTopic": {
+        "Name": "dev.user",
+        "NumPartitions": 12,
+        "ReplicationFactor": 2
+      },
+      "PollTimeMs": 2000
+    },
+    "NotifierProfileConfig": {
+      "KafkaTopic": {
+        "Name": "dev.profile",
+        "NumPartitions": 12,
+        "ReplicationFactor": 2
+      },
+      "PollTimeMs": 2000
+    },
+    "NotifierBlockConfig": {
+      "KafkaTopic": {
+        "Name": "dev.user_blocked",
+        "NumPartitions": 12,
+        "ReplicationFactor": 2
+      },
+      "PollTimeMs": 2000
+    },
+    "NotifierEmailNotificationsConfig": {
+      "KafkaTopic": {
+        "Name": "dev.notification_created",
+        "NumPartitions": 12,
+        "ReplicationFactor": 2
+      },
+      "PollTimeMs": 2000
+    },
+    "NotifierReferrerVerifiedConfig": {
+      "KafkaTopic": {
+        "Name": "dev.referrer_verified",
+        "NumPartitions": 12,
+        "ReplicationFactor": 2
+      },
+      "PollTimeMs": 2000
+    },
+    "ListenerFeatureBought": {
+      "Hosts": "127.0.0.1",
+      "MinBytes": 100,
+      "MaxBytes": 10000000,
+      "Tls": true,
+      "GroupId": "local_user_go_feature_bought_listener",
+      "Topic": "local.feature_bought"
+    },
+    "ListenerContent": {
+      "Hosts": "127.0.0.1",
+      "MinBytes": 100,
+      "MaxBytes": 10000000,
+      "Tls": true,
+      "GroupId": "local_user_go_content_listener",
+      "Topic": "local.content"
+    },
+    "ListenerUserPointStatUpdate": {
+      "Hosts": "127.0.0.1",
+      "MinBytes": 100,
+      "MaxBytes": 10000000,
+      "Tls": true,
+      "GroupId": "local_user_go_user_points_stats_update_listener",
+      "Topic": "local.user_points_stats_update",
+      "MaxDuration": 2,
+      "MaxBatchSize": 10000
+    },
+    "Wrappers": {
+      "Content": {
+        "ApiUrl": ""
+      },
+      "UserInfo": {
+        "ApiUrl": ""
+      },
+      "UserBlock": {
+        "ApiUrl": ""
+      },
+      "Auth": {
+        "ApiUrl": ""
+      },
+      "Likes": {
+        "ApiUrl": ""
+      },
+      "Follows": {
+        "ApiUrl": ""
+      },
+      "Views": {
+        "ApiUrl": ""
+      },
+      "UserCategories": {
+        "ApiUrl": ""
+      },
+      "UserHashtags": {
+        "ApiUrl": ""
+      },
+      "UserLikes": {
+        "ApiUrl": ""
+      },
+      "Categories": {
+        "ApiUrl": ""
+      },
+      "Hashtags": {
+        "ApiUrl": ""
+      },
+      "PointsCount": {
+        "ApiUrl": ""
+      }
+    },
+    "ZammadConfig": {
+      "ApiUrl": "https://zammad.lit.it",
+      "Token": "R48vcbtZOUXh1klGXQMSh7T78Vg3aGAH-1tjJ74YuvO2pCbF0rtsiqARTadetqbd"
+    },
+    "DeepLinkConfig": {
+      "Url": "",
+      "FirebaseConfig": {
+        "DomainUriPrefix": "",
+        "AndroidPackageName": "",
+        "IosBundleId": "",
+        "ApiUrl": "",
+        "ApiKey": ""
+      }
+    },
+    "S3Video": {
+      "CdnDirectory": "",
+      "CdnUrl": "",
+      "Region": "",
+      "Bucket": ""
+    },
+    "GoHighLevel": {
+      "ApiUrl": "https://rest.gohighlevel.com/v1",
+      "ApiKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2NhdGlvbl9pZCI6IndZZk1uRVBhdGdPbnNPandPaDQzIiwiY29tcGFueV9pZCI6IjJObnQ4ZldwbVFpbFNWcGRJUlVmIiwidmVyc2lvbiI6MSwiaWF0IjoxNjUxNDk3MTUzNzEzLCJzdWIiOiJ1c2VyX2lkIn0.mXhJqmuLGwMNxjiGTPzy42plgU9HxXo0XkCEipcompw"
+    },
+    "ExportRecordsPerIteration": 300,
+    "Referral": {
+      "UserVerified": {
+        "Listener": {
+          "Hosts": "127.0.0.1",
+          "MinBytes": 100,
+          "MaxBytes": 10000000,
+          "Tls": true,
+          "GroupId": "local_user_go_user_verified_listener",
+          "Topic": "local.user"
+        }
+      },
+      "NotifierReferrerConfig": {
+        "Hosts": "localhost:9093",
+        "Tls": true,
+        "KafkaAuth": {},
+        "MaxRetryCount": 10,
+        "FlushTimeMilliseconds": 2000,
+        "FlushAtSize": 40,
+        "KafkaTopic": {
+          "Name": "dev.referrer_verified",
+          "NumPartitions": 0,
+          "ReplicationFactor": 0
+        }
+      },
+      "DeepLink": {
+        "HttpPort": 5412
+      }
+    },
+    "Counters": {
+      "Listeners": {
+        "SpotUserLikes": {
+          "Hosts": "127.0.0.1",
+          "MinBytes": 100,
+          "MaxBytes": 10000000,
+          "Tls": true,
+          "GroupId": "local_user_spot_user_likes_listener",
+          "Topic": "local.spot_author_likes_count",
+          "MaxDuration": 2,
+          "MaxBatchSize": 10000
+        },
+        "SpotUserDislikes": {
+          "Hosts": "127.0.0.1",
+          "MinBytes": 100,
+          "MaxBytes": 10000000,
+          "Tls": true,
+          "GroupId": "local_user_spot_user_dislikes_listener",
+          "Topic": "local.spot_author_dislikes_count",
+          "MaxDuration": 2,
+          "MaxBatchSize": 10000
+        },
+        "SpotUserLoves": {
+          "Hosts": "127.0.0.1",
+          "MinBytes": 100,
+          "MaxBytes": 10000000,
+          "Tls": true,
+          "GroupId": "local_user_spot_user_loves_listener",
+          "Topic": "local.spot_author_loves_count",
+          "MaxDuration": 2,
+          "MaxBatchSize": 10000
+        }
+      }
+    },
+    "User": {
+      "FollowsCountersUpdated": {
+        "Listener": {
+          "Hosts": "127.0.0.1",
+          "MinBytes": 100,
+          "MaxBytes": 10000000,
+          "Tls": true,
+          "GroupId": "local_user_go_follows_counters_updated_listener",
+          "Topic": "local.follows_counter"
+        }
+      },
+      "FirstPaidWithdrawal": {
+        "Listener": {
+          "Hosts": "127.0.0.1",
+          "MinBytes": 100,
+          "MaxBytes": 10000000,
+          "Tls": true,
+          "GroupId": "local_user_go_first_paid_withdrawal_listener",
+          "Topic": "local.withdrawal"
+        }
+      },
+      "UploadStatsUpdate": {
+        "Listener": {
+          "Hosts": "127.0.0.1",
+          "MinBytes": 100,
+          "MaxBytes": 10000000,
+          "Tls": true,
+          "GroupId": "local_user_go_upload_stats_update_listener",
+          "Topic": "local.uploads_stats_update"
+        }
+      },
+      "SharesCounterUpdated": {
+        "Listener": {
+          "Hosts": "127.0.0.1",
+          "MinBytes": 100,
+          "MaxBytes": 10000000,
+          "Tls": true,
+          "GroupId": "local_user_go_shares_counter_updated_listener",
+          "Topic": "local.content_user_stats"
+        }
+      },
+      "UserSocialSubsPublisher": {
+        "Topic": {
+          "Name": "local.user_social_subs",
+          "NumPartitions": 0,
+          "ReplicationFactor": 0
+        },
+        "Hosts": "127.0.0.1",
+        "Tls": true,
+        "FlushAtSize": 10,
+        "PollTimeMs": 2000
+      },
+      "ExportRecordsPerIteration": 1000
+    },
+    "Crm": {
+      "UserUpdated": {
+        "Listener": {
+          "MaxDuration": 15,
+          "MaxBatchSize": 100,
+          "Hosts": "127.0.0.1",
+          "Topic": "local.crm_user",
+          "GroupId": "local_user_go_crm_user_updated",
+          "Tls": true
+        }
+      }
+    },
+    "CrmUpdateUserNotifier": {
+      "Hosts": "127.0.0.1",
+      "Tls": true,
+      "MaxRetryCount": 3,
+      "FlushTimeMilliseconds": 3000,
+      "FlushAtSize": 100,
+      "Topic": {
+        "Name": "local.crm_user",
+        "NumPartitions": "12",
+        "ReplicationFactor": "2"
+      }
+    }
+  }

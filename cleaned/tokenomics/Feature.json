@@ -1,0 +1,13 @@
+{
+    "Publisher": {
+        "Topic": {
+            "Name": "local.feature_bought",
+            "NumPartitions": 3,
+            "ReplicationFactor": 1
+        },
+        "Hosts": "127.0.0.1",
+        "Tls": true,
+        "MaxRetryCount": 5,
+        "FlushAtSize": 7
+    }
+}

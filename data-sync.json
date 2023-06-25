@@ -1,0 +1,144 @@
+{
+    "HttpPort": 5212,
+    "HttpDeepLinkPort": 5213,
+    "PrivateHttpPort": 5211,
+    "CdnBase": "https://awesomecdn.com",
+    "AuthApiUrl": "http://localhost",
+    "Db": {
+      "Host": "localhost",
+      "Port": 5432,
+      "Db": "local_base_api",
+      "User": "postgres",
+      "Password": "qwerty"
+    },
+    "DbUsers": {
+      "Host": "localhost",
+      "Port": 5432,
+      "Db": "local_users",
+      "User": "postgres",
+      "Password": "qwerty"
+    },
+    "DbTokenomics": {
+      "Host": "localhost",
+      "Port": 5432,
+      "Db": "local_tokenomics_go",
+      "User": "postgres",
+      "Password": "qwerty"
+    },
+    "Elastic": {
+      "Host": "http://localhost",
+      "Port": 9200,
+      "NumWorkers": 16,
+      "FlushThreshHold": 5e6,
+      "FlushInterval": 30
+    },
+    "ContentScylla": {
+      "Hosts": "127.0.0.1:9042",
+      "UserName": "",
+      "Password": "",
+      "Keyspace": "local_content_backend",
+      "PageSize": 5000000,
+      "NumConns": 32,
+      "MaxRoutingKeyInfo": 1000000,
+      "MaxPreparedStmts": 1000000
+    },
+    "ViewsScylla": {
+      "Hosts": "127.0.0.1:9042",
+      "UserName": "",
+      "Password": "",
+      "Keyspace": "local_views",
+      "PageSize": 5000000,
+      "NumConns": 32,
+      "MaxRoutingKeyInfo": 1000000,
+      "MaxPreparedStmts": 1000000
+    },
+    "HashtagsScylla" : {
+      "Hosts": "127.0.0.1:9042",
+      "UserName": "",
+      "Password": "",
+      "Keyspace": "local_hashtag",
+      "PageSize": 5000000,
+      "NumConns": 32,
+      "MaxRoutingKeyInfo": 1000000,
+      "MaxPreparedStmts": 1000000
+    },
+    "CategoriesScylla" : {
+      "Hosts": "127.0.0.1:9042",
+      "UserName": "",
+      "Password": "",
+      "Keyspace": "local_category",
+      "PageSize": 5000000,
+      "NumConns": 32,
+      "MaxRoutingKeyInfo": 1000000,
+      "MaxPreparedStmts": 1000000
+    },
+    "FollowsScylla": {
+      "Hosts": "127.0.0.1:9042",
+      "UserName": "",
+      "Password": "",
+      "Keyspace": "local_follow",
+      "PageSize": 5000000,
+      "NumConns": 32,
+      "MaxRoutingKeyInfo": 1000000,
+      "MaxPreparedStmts": 1000000
+    },
+    "MigrationEnv": "local",
+    "FollowsKafka": {
+      "Hosts": "",
+      "Tls": true
+    },
+    "LikesScylla": {
+      "Hosts": "127.0.0.1:9042",
+      "UserName": "",
+      "Password": "",
+      "Keyspace": "local_like",
+      "PageSize": 5000000,
+      "NumConns": 32,
+      "MaxRoutingKeyInfo": 1000000,
+      "MaxPreparedStmts": 1000000
+    },
+    "LikesKafka": {
+      "Hosts": "",
+      "KafkaAuth": {},
+      "Tls": true
+    },
+    "ContentKafkaWriter": {
+      "Hosts": "",
+      "KafkaAuth": {},
+      "Tls": true
+    },
+    "UserKafkaWriter": {
+      "Hosts": "",
+      "KafkaAuth": {},
+      "Tls": true
+    },
+    "NotifierContentDeleteConfig": {
+      "KafkaTopic": {
+        "Name": "dev.content",
+        "NumPartitions": 12,
+        "ReplicationFactor": 2
+      },
+      "PollTimeMs": 2000
+    },
+    "NotifierUserUpdateInfoConfig": {
+      "KafkaTopic": {
+        "Name": "dev.user",
+        "NumPartitions": 12,
+        "ReplicationFactor": 2
+      },
+      "PollTimeMs": 2000
+    },
+    "NotifierUserConfig": {
+      "Hosts": "localhost:9093",
+      "Tls": true,
+      "KafkaAuth": {},
+      "MaxRetryCount": 10,
+      "FlushTimeMilliseconds": 2000,
+      "FlushAtSize": 40,
+      "KafkaTopic": {
+        "Name": "dev.user",
+        "NumPartitions": 0,
+        "ReplicationFactor": 0
+      }
+    }
+  }

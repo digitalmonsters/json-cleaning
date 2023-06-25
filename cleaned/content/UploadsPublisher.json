@@ -1,0 +1,7 @@
+{
+    "Topic": {
+        "Name": "local.uploads_stats_update",
+        "NumPartitions": 0,
+        "ReplicationFactor": 0
+    }
+}

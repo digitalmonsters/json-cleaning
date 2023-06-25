@@ -1,0 +1,7 @@
+{
+    "Topic": {
+        "Name": "local.content_paid_time_increased",
+        "NumPartitions": 0,
+        "ReplicationFactor": 0
+    }
+}

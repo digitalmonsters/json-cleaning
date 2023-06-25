@@ -1,0 +1,4 @@
+{
+    "GroupId": "local_tokenomics_new_config_listener",
+    "Topic": "local.new_config"
+}

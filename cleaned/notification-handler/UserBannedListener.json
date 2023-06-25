@@ -1,0 +1,4 @@
+{
+    "GroupId": "local_notification_handler_user_banned_listener",
+    "Topic": "local.user"
+}

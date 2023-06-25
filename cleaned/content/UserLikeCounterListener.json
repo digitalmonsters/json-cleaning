@@ -1,0 +1,13 @@
+{
+    "Kafka": {
+        "Hosts": "127.0.0.1",
+        "KafkaAuth": {},
+        "MinBytes": 100,
+        "MaxBytes": 100000000,
+        "Tls": true,
+        "GroupId": "local_back_user_like_consumer",
+        "Topic": "local.likes_received_by_user_count",
+        "MaxBackOffTimeMilliseconds": 60000,
+        "BackOffTimeIntervalMilliseconds": 1000
+    }
+}

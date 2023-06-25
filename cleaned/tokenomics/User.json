@@ -1,0 +1,38 @@
+{
+    "Listeners": {
+        "KycVerification": {
+            "Hosts": "127.0.0.1",
+            "Topic": "local.user",
+            "GroupId": "local_tokenomics_kyc_status_listener",
+            "MinBytes": 100,
+            "MaxBytes": 10000000,
+            "Tls": true
+        },
+        "GrandReferrer": {
+            "Hosts": "127.0.0.1",
+            "Topic": "local.user",
+            "GroupId": "local_tokenomics_grand_referrer_listener",
+            "MinBytes": 100,
+            "MaxBytes": 10000000,
+            "Tls": true
+        },
+        "ContentCreator": {
+            "Hosts": "127.0.0.1",
+            "Topic": "local.creators",
+            "GroupId": "local_tokenomics_creators_listener",
+            "MinBytes": 100,
+            "MaxBytes": 10000000,
+            "Tls": true
+        }
+    },
+    "UserTags": {
+        "Listener": {
+            "Hosts": "127.0.0.1",
+            "Topic": "local.user",
+            "GroupId": "local_tokenomics_user_tags_listener",
+            "MinBytes": 100,
+            "MaxBytes": 10000000,
+            "Tls": true
+        }
+    }
+}

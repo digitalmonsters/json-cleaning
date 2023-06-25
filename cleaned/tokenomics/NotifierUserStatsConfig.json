@@ -1,0 +1,8 @@
+{
+    "Topic": {
+        "Name": "local.user_points_stats_update",
+        "NumPartitions": 0,
+        "ReplicationFactor": 0
+    },
+    "RetryCount": 3
+}

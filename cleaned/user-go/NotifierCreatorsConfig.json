@@ -1,0 +1,7 @@
+{
+    "KafkaTopic": {
+        "Name": "dev.creators",
+        "NumPartitions": 12,
+        "ReplicationFactor": 2
+    }
+}

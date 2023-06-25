@@ -1,0 +1,4 @@
+{
+    "GroupId": "local_views_content_delete_listener",
+    "Topic": "local.content"
+}

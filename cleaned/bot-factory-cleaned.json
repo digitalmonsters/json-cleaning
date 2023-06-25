@@ -1,0 +1,6 @@
+{
+    "NewContentListener": {
+        "GroupId": "local_new_content_listener",
+        "Topic": "local.content"
+    }
+}

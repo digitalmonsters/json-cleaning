@@ -1,0 +1,7 @@
+{
+    "PointsThresholdForUserWithoutKYC": 10,
+    "PointBaseRate": 1,
+    "TokenReserveSupply": 1000,
+    "TokenTotalSupply": 10000,
+    "PointToToken": 1000
+}

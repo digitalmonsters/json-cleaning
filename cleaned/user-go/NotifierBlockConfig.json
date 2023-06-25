@@ -1,0 +1,7 @@
+{
+    "KafkaTopic": {
+        "Name": "dev.user_blocked",
+        "NumPartitions": 12,
+        "ReplicationFactor": 2
+    }
+}

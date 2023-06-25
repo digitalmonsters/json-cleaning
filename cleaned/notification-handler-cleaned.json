@@ -1,0 +1,63 @@
+{
+    "CreatorsListener": {
+        "GroupId": "local_notification_handler_creators_listener",
+        "Topic": "local.creators"
+    },
+    "SendingQueueListener": {
+        "GroupId": "local_notification_handler_sending_queue_listener",
+        "Topic": "local.handler_sending_queue"
+    },
+    "CommentListener": {
+        "GroupId": "local_notification_handler_comment_listener",
+        "Topic": "local.comments"
+    },
+    "VoteListener": {
+        "GroupId": "local_notification_handler_vote_listener",
+        "Topic": "local.comment_votes"
+    },
+    "LikeListener": {
+        "GroupId": "local_notification_handler_like_listener",
+        "Topic": "local.likes"
+    },
+    "ContentListener": {
+        "GroupId": "local_notification_handler_content_listener",
+        "Topic": "local.content"
+    },
+    "KysStatusListener": {
+        "GroupId": "local_notification_handler_kyc_status_listener",
+        "Topic": "local.user"
+    },
+    "FollowListener": {
+        "GroupId": "local_notification_handler_follow_listener",
+        "Topic": "local.follows"
+    },
+    "TokenomicsNotificationListener": {
+        "GroupId": "local_notification_handler_tokenomics_notification_listener",
+        "Topic": "local.notification_created"
+    },
+    "EmailNotificationListener": {
+        "GroupId": "local_notification_handler_email_notification_listener",
+        "Topic": "local.notification_created"
+    },
+    "PushAdminMessageListener": {
+        "GroupId": "local_notification_handler_push_admin_messages_listener",
+        "Topic": "local.push_admin_messages"
+    },
+    "UserDeleteListener": {
+        "GroupId": "local_notification_handler_user_delete_listener",
+        "Topic": "local.user"
+    },
+    "UserBannedListener": {
+        "GroupId": "local_notification_handler_user_banned_listener",
+        "Topic": "local.user"
+    },
+    "UserUpdateListener": {
+        "GroupId": "local_notification_handler_user_update_listener",
+        "Topic": "local.user"
+    },
+    "EmailLinks": {
+        "VerifyHost": "",
+        "VerifyPath": "",
+        "MarketingSite": ""
+    }
+}

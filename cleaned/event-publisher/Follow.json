@@ -1,0 +1,75 @@
+{
+    "EventsFlushIntervalMs": 100,
+    "Scylla": {
+        "Hosts": "127.0.0.1",
+        "UserName": "",
+        "Password": "",
+        "Keyspace": "local_follow",
+        "PageSize": 0,
+        "NumConns": 12,
+        "MaxRoutingKeyInfo": 3000,
+        "MaxPreparedStmts": 3000
+    },
+    "KafkaWriter": {
+        "Hosts": "127.0.0.1:9093",
+        "KafkaAuth": {},
+        "Tls": true
+    },
+    "Notifiers": {
+        "FollowNotifier": {
+            "KafkaTopic": {
+                "Name": "local.follows",
+                "NumPartitions": 0,
+                "ReplicationFactor": 0
+            },
+            "PollTimeMs": 2000
+        },
+        "FollowCounterNotifier": {
+            "KafkaTopic": {
+                "Name": "local.follows_counter",
+                "NumPartitions": 0,
+                "ReplicationFactor": 0
+            },
+            "PollTimeMs": 2000
+        },
+        "TodayFollowersCounterNotifier": {
+            "KafkaTopic": {
+                "Name": "local.today_followers_counter",
+                "NumPartitions": 0,
+                "ReplicationFactor": 0
+            },
+            "PollTimeMs": 2000
+        },
+        "UniqueFollowersPerDayCountNotifier": {
+            "KafkaTopic": {
+                "Name": "local.unique_followers_per_day_count",
+                "NumPartitions": 0,
+                "ReplicationFactor": 0
+            }
+        }
+    },
+    "Listeners": {
+        "UserDeleted": {
+            "Hosts": "",
+            "KafkaAuth": {},
+            "GroupId": "user-follow-backend",
+            "Topic": "local.user",
+            "MinBytes": 100,
+            "MaxBytes": 500000,
+            "MaxBatchSize": 17000,
+            "ListenerDuration": 5,
+            "Tls": true
+        },
+        "UserBlocked": {
+            "Hosts": "",
+            "KafkaAuth": {},
+            "GroupId": "user-block-follow-backend",
+            "Topic": "local.user_blocked",
+            "MinBytes": 100,
+            "MaxBytes": 500000,
+            "MaxBatchSize": 17000,
+            "ListenerDuration": 5,
+            "Tls": true
+        }
+    }
+}

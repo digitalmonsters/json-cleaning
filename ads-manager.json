@@ -1,0 +1,79 @@
+{
+    "HttpPort": 5212,
+    "PrivateHttpPort": 5211,
+    "CdnBase": "https://awesomecdn.com",
+    "MasterDb": {
+      "Host": "localhost",
+      "Port": 5432,
+      "Db": "local_ads",
+      "User": "postgres",
+      "Password": "qwerty"
+    },
+    "ReadonlyDb": {
+      "Host": "localhost",
+      "Port": 5432,
+      "Db": "local_ads",
+      "User": "postgres",
+      "Password": "qwerty"
+    },
+    "Wrappers": {
+      "Content": {
+        "ApiUrl": ""
+      },
+      "UserInfo": {
+        "ApiUrl": ""
+      },
+      "UserBlock": {
+        "ApiUrl": ""
+      },
+      "Auth": {
+        "ApiUrl": ""
+      },
+      "Likes": {
+        "ApiUrl": ""
+      },
+      "Follows": {
+        "ApiUrl": ""
+      },
+      "Views": {
+        "ApiUrl": ""
+      },
+      "UserCategories": {
+        "ApiUrl": ""
+      },
+      "UserHashtags": {
+        "ApiUrl": ""
+      },
+      "UserLikes": {
+        "ApiUrl": ""
+      },
+      "Categories": {
+        "ApiUrl": ""
+      },
+      "Hashtags": {
+        "ApiUrl": ""
+      },
+      "PointsCount": {
+        "ApiUrl": ""
+      }
+    },
+    "Jobber": {
+      "DefaultQueue": "local_machinery_tasks",
+      "ResultExpire": 3600,
+      "Broker": "",
+      "ResultBackend": "",
+      "Lock": "",
+      "Concurrency": 40,
+      "Tls": true
+    },
+    "ViewContentListener": {
+      "Hosts": "",
+      "MinBytes": 100,
+      "MaxBytes": 10000000,
+      "Tls": true,
+      "MaxDuration": 2,
+      "MaxBatchSize": 1000,
+      "GroupId": "local_ads_view_content_listener",
+      "Topic": "local.view_content"
+    }
+  }

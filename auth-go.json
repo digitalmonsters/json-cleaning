@@ -1,0 +1,136 @@
+{
+    "HttpPort": 5215,
+    "PrivateHttpPort": 5211,
+    "GeolocationApiUrl": "http://ip-api.com/json/",
+    "OnlineTimeoutMs": 3000,
+    "MasterDb": {
+      "Host": "localhost",
+      "Port": 5432,
+      "Db": "local_auth_go",
+      "User": "postgres",
+      "Password": "qwerty"
+    },
+    "ReadonlyDb": {
+      "Host": "localhost",
+      "Port": 5432,
+      "Db": "local_auth_go",
+      "User": "postgres",
+      "Password": "qwerty"
+    },
+    "KafkaWriterConfig": {
+      "Hosts": "",
+      "Tls": true
+    },
+    "PermissionsTable": "permissions",
+    "Redis": {
+      "Host": "localhost:6379",
+      "Tls": false,
+      "Db": 1
+    },
+    "QrConfig": {
+      "QrTtlSeconds": 180
+    },
+    "GoogleConfig": {
+      "IosClientId": "",
+      "AndroidClientId": "",
+      "WebClientId": ""
+    },
+    "AppleConfig":{
+      "WebClientId": "",
+      "ClientId": ""
+    },
+    "Wrappers": {
+      "Content": {
+        "ApiUrl": ""
+      },
+      "UserInfo": {
+        "ApiUrl": ""
+      },
+      "UserBlock": {
+        "ApiUrl": ""
+      },
+      "AuthGo": {
+        "ApiUrl": ""
+      },
+      "Auth": {
+        "ApiUrl": ""
+      },
+      "Likes": {
+        "ApiUrl": ""
+      },
+      "Follows": {
+        "ApiUrl": ""
+      },
+      "Views": {
+        "ApiUrl": ""
+      },
+      "UserCategories": {
+        "ApiUrl": ""
+      },
+      "UserHashtags": {
+        "ApiUrl": ""
+      },
+      "UserLikes": {
+        "ApiUrl": ""
+      },
+      "Categories": {
+        "ApiUrl": ""
+      },
+      "Hashtags": {
+        "ApiUrl": ""
+      },
+      "PointsCount": {
+        "ApiUrl": ""
+      },
+      "BaseApi": {
+        "ApiUrl": ""
+      },
+      "UserGo": {
+        "ApiUrl": ""
+      }
+    },
+    "UserListener": {
+      "Hosts": "127.0.0.1",
+      "Topic": "local.user",
+      "GroupId": "local_auth_go_user_listener",
+      "MinBytes": 100,
+      "MaxBytes": 10000000,
+      "Tls": true
+    },
+    "UserPublisher": {
+      "Name": "local.user",
+      "NumPartitions": 24,
+      "ReplicationFactor": 2
+    },
+    "NotificationCreatedPublisher": {
+      "Name": "local.notification_created",
+      "NumPartitions": 24,
+      "ReplicationFactor": 2
+    },
+    "MobileConfig": {
+      "MaxHashtagsCount": 3,
+      "MaxDescriptionCharCount": 150,
+      "TermsLink": "",
+      "PrivacyLink": "",
+      "Disclaimer": "",
+      "Api": {
+        "ContentUrl": "",
+        "EventsUrl": "",
+        "RewardsAndVaultUrl": "",
+        "UserBlockUrl": "",
+        "AuthUrl": "",
+        "ReferralsUrl": "",
+        "UserInfoUrl": "",
+        "CommentsUrl": "",
+        "NotificationsUrl": "",
+        "AchievementsUrl": "",
+        "JwtUrl": "",
+        "DiscoveryUrl": "",
+        "FollowsUrl": "",
+        "MusicUrl": "",
+        "AdsManagerUrl": "",
+        "UserGoUrl": "",
+        "AuthGoUrl": ""
+      }
+    }
+  }

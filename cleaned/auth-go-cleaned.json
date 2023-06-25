@@ -1,0 +1,12 @@
+{
+    "UserListener": {
+        "Topic": "local.user",
+        "GroupId": "local_auth_go_user_listener"
+    },
+    "UserPublisher": {
+        "Name": "local.user"
+    },
+    "NotificationCreatedPublisher": {
+        "Name": "local.notification_created"
+    }
+}

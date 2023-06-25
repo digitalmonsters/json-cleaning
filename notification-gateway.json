@@ -1,0 +1,55 @@
+{
+    "HttpPort": 5212,
+    "PrivateHttpPort": 5211,
+    "Firebase": {
+      "ApiKey": "",
+      "AuthDomain": "",
+      "AuthOverride": {},
+      "DatabaseURL": "",
+      "ProjectID": "",
+      "ServiceAccountID": "",
+      "StorageBucket": "",
+      "MessagingSenderId": "",
+      "AppId": "",
+      "MeasurementId": ""
+    },
+    "PushListener": {
+      "Hosts": "127.0.0.1",
+      "MinBytes": 100,
+      "MaxBytes": 10000000,
+      "Tls": true,
+      "GroupId": "local_notification_gateway_push_listener",
+      "Topic": "local.push_messages",
+      "MaxDuration": 2,
+      "MaxBatchSize": 1000
+    },
+    "EmailListener": {
+      "Hosts": "127.0.0.1",
+      "MinBytes": 100,
+      "MaxBytes": 10000000,
+      "Tls": true,
+      "GroupId": "local_notification_gateway_email_listener",
+      "Topic": "local.email"
+    },
+    "Wrappers": {},
+    "SmsProviders": {
+      "CheapGlobalSms": {
+        "ApiUrl": "https://cheapglobalsms.com/api_v1",
+        "Account": "",
+        "Password": "",
+        "SmsType": 0,
+        "UnicodeSupport": 2,
+        "SenderDisplayName": "",
+        "RouteType": 0
+      }
+    },
+    "SelectedSmsProvider": 1,
+    "EmailProviders": {
+      "SES": {
+        "Region": "us-west-2",
+        "CharSet": "UTF-8",
+        "Sender": "lit@lit.it"
+      }
+    },
+    "SelectedEmailProvider": 1
+  }

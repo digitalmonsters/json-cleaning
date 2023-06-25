@@ -1,0 +1,34 @@
+{
+    "NotifierCommentConfig": {
+        "KafkaTopic": {
+            "Name": "local.comments",
+            "NumPartitions": 0,
+            "ReplicationFactor": 0
+        }
+    },
+    "NotifierContentCommentsCounterConfig": {
+        "KafkaTopic": {
+            "Name": "local.content_comments_counter",
+            "NumPartitions": 0,
+            "ReplicationFactor": 0
+        }
+    },
+    "NotifierUserCommentsCounterConfig": {
+        "KafkaTopic": {
+            "Name": "local.user_comments_counter",
+            "NumPartitions": 0,
+            "ReplicationFactor": 0
+        }
+    },
+    "NotifierVoteConfig": {
+        "KafkaTopic": {
+            "Name": "local.comment_votes",
+            "NumPartitions": 0,
+            "ReplicationFactor": 0
+        }
+    },
+    "UserListener": {
+        "Topic": "local.user",
+        "GroupId": "local_comments_user_listener"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "UserVerifiedConfig": {
+        "Listener": {
+            "Hosts": "127.0.0.1",
+            "MinBytes": 100,
+            "MaxBytes": 10000000,
+            "Tls": true,
+            "MaxDuration": 2,
+            "MaxBatchSize": 1000,
+            "GroupId": "local_referrer_verified_listener",
+            "Topic": "local.referrer_verified"
+        }
+    },
+    "UserDeletedConfig": {
+        "Listener": {
+            "Hosts": "127.0.0.1",
+            "MinBytes": 100,
+            "MaxBytes": 10000000,
+            "Tls": true,
+            "MaxDuration": 2,
+            "MaxBatchSize": 1000,
+            "GroupId": "local_referrer_deleted_listener",
+            "Topic": "local.referrer_verified"
+        }
+    }
+}

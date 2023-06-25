@@ -1,0 +1,7 @@
+{
+    "Topic": {
+        "Name": "local.content_user_stats",
+        "NumPartitions": 0,
+        "ReplicationFactor": 0
+    }
+}

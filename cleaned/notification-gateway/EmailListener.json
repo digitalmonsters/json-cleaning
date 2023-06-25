@@ -1,0 +1,4 @@
+{
+    "GroupId": "local_notification_gateway_email_listener",
+    "Topic": "local.email"
+}

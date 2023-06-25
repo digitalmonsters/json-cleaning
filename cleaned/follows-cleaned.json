@@ -1,0 +1,42 @@
+{
+    "UserKafka": {
+        "KafkaAuth": {},
+        "GroupId": "user-follow-backend",
+        "Topic": "local.user",
+        "ListenerDuration": 5
+    },
+    "UserBlockKafka": {
+        "KafkaAuth": {},
+        "GroupId": "user-block-follow-backend",
+        "Topic": "local.user_blocked",
+        "ListenerDuration": 5
+    },
+    "NotifierFollowConfig": {
+        "KafkaTopic": {
+            "Name": "local.follows",
+            "NumPartitions": 0,
+            "ReplicationFactor": 0
+        }
+    },
+    "NotifierFollowCounterConfig": {
+        "KafkaTopic": {
+            "Name": "local.follows_counter",
+            "NumPartitions": 0,
+            "ReplicationFactor": 0
+        }
+    },
+    "NotifierTodayFollowersCounterConfig": {
+        "KafkaTopic": {
+            "Name": "local.today_followers_counter",
+            "NumPartitions": 0,
+            "ReplicationFactor": 0
+        }
+    },
+    "NotifierUniqueFollowersPerDayCountConfig": {
+        "KafkaTopic": {
+            "Name": "local.unique_followers_per_day_count",
+            "NumPartitions": 0,
+            "ReplicationFactor": 0
+        }
+    }
+}

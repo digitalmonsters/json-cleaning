@@ -1,0 +1,60 @@
+{
+    "MinContentDuration": 60,
+    "MaxPoolSize": 64,
+    "NotifierContentViewsConfig": {
+        "KafkaTopic": {
+            "Name": "local.view_stats_update",
+            "NumPartitions": 0,
+            "ReplicationFactor": 0
+        }
+    },
+    "NotifierCategoryViewsConfig": {
+        "KafkaTopic": {
+            "Name": "local.category_views",
+            "NumPartitions": 0,
+            "ReplicationFactor": 0
+        }
+    },
+    "NotifierHashtagViewsConfig": {
+        "KafkaTopic": {
+            "Name": "local.hashtag_views",
+            "NumPartitions": 0,
+            "ReplicationFactor": 0
+        }
+    },
+    "NotifierUserContentConfig": {
+        "KafkaTopic": {
+            "Name": "local.view_content",
+            "NumPartitions": 0,
+            "ReplicationFactor": 0
+        }
+    },
+    "NotifierUserViewConfig": {
+        "KafkaTopic": {
+            "Name": "local.today_watch_time",
+            "NumPartitions": 0,
+            "ReplicationFactor": 0
+        }
+    },
+    "NotifierOwnerViewsConfig": {
+        "KafkaTopic": {
+            "Name": "local.views_received_by_user_count",
+            "NumPartitions": 0,
+            "ReplicationFactor": 0
+        }
+    },
+    "NotifierUserTotalWatchConfig": {
+        "KafkaTopic": {
+            "Name": "local.total_watch_time",
+            "NumPartitions": 0,
+            "ReplicationFactor": 0
+        }
+    },
+    "CounterProcessorConfig": {
+        "UserMaxDailyUniqueViews": 5
+    },
+    "ContentDeleteListener": {
+        "GroupId": "local_views_content_delete_listener",
+        "Topic": "local.content"
+    }
+}

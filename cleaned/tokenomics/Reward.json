@@ -1,0 +1,82 @@
+{
+    "FirstNSocialMedias": {
+        "Listener": {
+            "Hosts": "127.0.0.1",
+            "Topic": "local.profile",
+            "GroupId": "local_tokenomics_first_social_medias_listener",
+            "MinBytes": 100,
+            "MaxBytes": 10000000,
+            "Tls": true
+        }
+    },
+    "FirstAvatar": {
+        "Listener": {
+            "Hosts": "127.0.0.1",
+            "Topic": "local.user",
+            "GroupId": "local_tokenomics_first_avatar_listener",
+            "MinBytes": 100,
+            "MaxBytes": 10000000,
+            "Tls": true
+        }
+    },
+    "FirstBio": {
+        "Listener": {
+            "Hosts": "127.0.0.1",
+            "Topic": "local.user",
+            "GroupId": "local_tokenomics_first_bio_listener",
+            "MinBytes": 100,
+            "MaxBytes": 10000000,
+            "Tls": true
+        }
+    },
+    "FirstVideoUpload": {
+        "Listener": {
+            "Hosts": "127.0.0.1",
+            "Topic": "local.content",
+            "GroupId": "local_tokenomics_first_video_upload_listener",
+            "MinBytes": 100,
+            "MaxBytes": 10000000,
+            "Tls": true
+        }
+    },
+    "FirstBioVideoUpload": {
+        "Listener": {
+            "Hosts": "127.0.0.1",
+            "Topic": "local.content",
+            "GroupId": "local_tokenomics_first_bio_video_upload_listener",
+            "MinBytes": 100,
+            "MaxBytes": 10000000,
+            "Tls": true
+        }
+    },
+    "FirstSpotUpload": {
+        "Listener": {
+            "Hosts": "127.0.0.1",
+            "Topic": "local.content",
+            "GroupId": "local_tokenomics_first_spot_upload_listener",
+            "MinBytes": 100,
+            "MaxBytes": 10000000,
+            "Tls": true
+        }
+    },
+    "TopSpot": {
+        "Listener": {
+            "Hosts": "127.0.0.1",
+            "Topic": "local.top_spots",
+            "GroupId": "local_tokenomics_top_spots_listener",
+            "MinBytes": 100,
+            "MaxBytes": 10000000,
+            "Tls": true
+        }
+    },
+    "SocialSubsTargetAchieved": {
+        "Listener": {
+            "Hosts": "127.0.0.1",
+            "Topic": "local.user_social_subs",
+            "GroupId": "local_tokenomics_social_subs_target_achieved_listener",
+            "MinBytes": 100,
+            "MaxBytes": 10000000,
+            "Tls": true
+        }
+    }
+}

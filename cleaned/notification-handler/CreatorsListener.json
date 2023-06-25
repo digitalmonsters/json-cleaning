@@ -1,0 +1,4 @@
+{
+    "GroupId": "local_notification_handler_creators_listener",
+    "Topic": "local.creators"
+}

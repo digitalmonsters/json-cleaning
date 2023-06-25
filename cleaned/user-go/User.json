@@ -1,0 +1,54 @@
+{
+    "FollowsCountersUpdated": {
+        "Listener": {
+            "Hosts": "127.0.0.1",
+            "MinBytes": 100,
+            "MaxBytes": 10000000,
+            "Tls": true,
+            "GroupId": "local_user_go_follows_counters_updated_listener",
+            "Topic": "local.follows_counter"
+        }
+    },
+    "FirstPaidWithdrawal": {
+        "Listener": {
+            "Hosts": "127.0.0.1",
+            "MinBytes": 100,
+            "MaxBytes": 10000000,
+            "Tls": true,
+            "GroupId": "local_user_go_first_paid_withdrawal_listener",
+            "Topic": "local.withdrawal"
+        }
+    },
+    "UploadStatsUpdate": {
+        "Listener": {
+            "Hosts": "127.0.0.1",
+            "MinBytes": 100,
+            "MaxBytes": 10000000,
+            "Tls": true,
+            "GroupId": "local_user_go_upload_stats_update_listener",
+            "Topic": "local.uploads_stats_update"
+        }
+    },
+    "SharesCounterUpdated": {
+        "Listener": {
+            "Hosts": "127.0.0.1",
+            "MinBytes": 100,
+            "MaxBytes": 10000000,
+            "Tls": true,
+            "GroupId": "local_user_go_shares_counter_updated_listener",
+            "Topic": "local.content_user_stats"
+        }
+    },
+    "UserSocialSubsPublisher": {
+        "Topic": {
+            "Name": "local.user_social_subs",
+            "NumPartitions": 0,
+            "ReplicationFactor": 0
+        },
+        "Hosts": "127.0.0.1",
+        "Tls": true,
+        "FlushAtSize": 10,
+        "PollTimeMs": 2000
+    },
+    "ExportRecordsPerIteration": 1000
+}

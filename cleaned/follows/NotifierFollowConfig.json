@@ -1,0 +1,7 @@
+{
+    "KafkaTopic": {
+        "Name": "local.follows",
+        "NumPartitions": 0,
+        "ReplicationFactor": 0
+    }
+}
